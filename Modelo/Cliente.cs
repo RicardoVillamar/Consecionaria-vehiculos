@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,50 +6,62 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class Cliente
+    public class CompraVenta
     {
-        private string idCliente;
-        private string nombre;
-        private string apellido;
-        private string cedula;
-        private string telefono;
-        private string email;
+        
+// Estas propiedades parecen almacenar información relevante sobre una compra o venta, como el cliente involucrado, los detalles de los productos comprados, el tipo de operación, la fecha, el subtotal y el total.
 
-        public string IdCliente { get => idCliente; set => idCliente = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public string Cedula { get => cedula; set => cedula = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
-        public string Email { get => email; set => email = value; }
-
-        public Cliente(string idCliente, string nombre, string apellido, string cedula, string telefono, string email)
+        private Cliente _cliente;
+        public Cliente Cliente
         {
-            IdCliente = idCliente;
-            Nombre = nombre;
-            Apellido = apellido;
-            Cedula = cedula;
-            Telefono = telefono;
-            Email = email;
+            get { return _cliente; }
+            set { _cliente = value; }
         }
 
-        public void registrarCliente()
-        {
+        //Representan los productos o servicios que se están comprando o vendiendo.
 
+        private List<Cliente> _clienteList;
+        public List<Detalle> Detalles
+        {
+            get { return; _clienteList }
+            set { _clienteList = value; }
         }
 
-        public void ActualizarCliente()
+    //Indica el tipo de operación que se está realizando, es decir, si es una compra o una venta.
+
+            private TipoCV;
+            public string _TipoCV {
+
+            get { return; _TipoCV }
+            set {_TipoCV = value; }
+    }
+        
+     //Es redundante y puede eliminarse.
+
+        private _fecha;
+            public DateTime _fecha
         {
 
+            get { return; _fecha }
+            set { _fecha = value; }
         }
 
-        public void AnularCliente()
+      //Este método debería contener la lógica necesaria para realizar estos cálculos basados en los detalles de la compra.
+
+        private _subtotal;
+            public decimal _subtotal
         {
 
+            get { return; _subtotal }
+            set { _subtotal = value; }
         }
-
-        public void ReporteCliente()
+        private _total;
+            public decimal _total
         {
 
+            get { return; _total }
+            set { _total = value; }
         }
     }
-}
+
+    }
