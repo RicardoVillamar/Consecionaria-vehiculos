@@ -24,9 +24,7 @@ En esta sección se explica el proceso de instalación de todas las dependencias
 
 ### 📝Clonar Repositorio
 Abre Visual Studio.
-
 En la pantalla principal, seleccionamos Clonar un repositorio.
-
 En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
 
 Tambien puedes decargar el zip del ultimo Commit del Repositorio
