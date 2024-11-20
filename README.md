@@ -14,6 +14,7 @@ Aquí va el contenido de esta sección.
 Aquí describe los requisitos necesarios.
 
 ### 📝Clonar Repositorio
+###
 1. Abre Visual Studio.
 2. En la pantalla principal, seleccionamos Clonar un repositorio.
 3. En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
