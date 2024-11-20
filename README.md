@@ -16,11 +16,4 @@ Ejecutar el Proyecto
 2. El proyecto debería abrirse automáticamente.
 
 📝 Clonar Repositorio
-Instalacion
-En esta sección se explica el proceso de instalación de todas las dependencias necesarias para ejecutar el proyecto.
 
-📦 Requerimientos de Instalacion
-Visual Studio 2022 - Descarga
-Sql Server - Descarga
-Git - Descarga
-.Net 8 SDK - Descarga
