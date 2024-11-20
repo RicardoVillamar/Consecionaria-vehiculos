@@ -10,8 +10,8 @@
 
 # Tabla de Contenidos
 - [Instalacion](#instalacion)
-  - [Requerimientos de Instalacion](#requerimientos-de-instalacion)
-  - [Clonar Repositorio](#clonar-repositorio)
+  - 📝[Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦
+  - [Clonar Repositorio](#clonar-repositorio) 
 - [Instalacion de base de datos](#instalacion-de-base-de-datos)
 - [Ejecucion del Proyecto](#ejecucion-del-proyecto)
 
