@@ -51,5 +51,7 @@ También se abrirá la ventana del formulario principal.
 Hacer clic en el botón verde con un icono de "Play" que dice "Iniciar".
 Este botón ejecutará el proyecto en modo de depuración, al igual que F5.  
 <div align="center">
-![4028901](https://github.com/user-attachments/assets/ca762625-664f-4209-9567-37b28be92d0d)
+ 
+![image](https://github.com/user-attachments/assets/a71144c9-64d8-4607-a252-72c2c14deaa0)
+
 </div>
