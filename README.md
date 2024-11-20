@@ -10,7 +10,7 @@
 
 # Tabla de Contenidos
 - 🛠[Instalacion](#instalacion)
-  - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦
+  - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦  
   -📝[Clonar Repositorio](#clonar-repositorio) 
 - ▶️[Ejecucion del Proyecto](#ejecucion-del-proyecto)
 
