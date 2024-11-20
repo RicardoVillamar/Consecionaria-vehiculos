@@ -6,62 +6,59 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class CompraVenta
+    public class Cliente
     {
-        
-// Estas propiedades parecen almacenar información relevante sobre una compra o venta, como el cliente involucrado, los detalles de los productos comprados, el tipo de operación, la fecha, el subtotal y el total.
 
-        private Cliente _cliente;
-        public Cliente Cliente
+    //Se está tomando el valor de identificación del cliente que se proporciona al crear un nuevo cliente.
+
+        private string _idCliente;
+        public string IdCliente
         {
-            get { return _cliente; }
-            set { _cliente = value; }
+            get { return _idCliente; }
+            set { _idCliente = value; }
         }
 
-        //Representan los productos o servicios que se están comprando o vendiendo.
+   //Se está tomando el nombre del cliente que se proporcionó al crear un nuevo cliente
 
-        private List<Cliente> _clienteList;
-        public List<Detalle> Detalles
+        private string _Nombre;
+        public string Nombre
         {
-            get { return; _clienteList }
-            set { _clienteList = value; }
+            get { return _Nombre; }
+            set { _Nombre = value; }
         }
 
-    //Indica el tipo de operación que se está realizando, es decir, si es una compra o una venta.
+   //Esta línea se encarga de asignar el valor del apellido que se proporcionó al crear un nuevo cliente
 
-            private TipoCV;
-            public string _TipoCV {
-
-            get { return; _TipoCV }
-            set {_TipoCV = value; }
-    }
-        
-     //Es redundante y puede eliminarse.
-
-        private _fecha;
-            public DateTime _fecha
+        private string _Apellido;
+        public string Apellido
         {
+            get { return _Apellido; }
+            set { _Apellido = value; }
 
-            get { return; _fecha }
-            set { _fecha = value; }
+   //Esta línea se encarga de asignar el valor del cedula que se proporcionó al crear un nuevo cliente
+
+        }
+        private string _Cedula;
+        public string Cedula
+        {
+            get { return _Cedula; }
+            set { _Cedula = value; }
         }
 
-      //Este método debería contener la lógica necesaria para realizar estos cálculos basados en los detalles de la compra.
+ //Esta línea se encarga de asignar el valor del telefono que se proporcionó al crear un nuevo cliente
 
-        private _subtotal;
-            public decimal _subtotal
+        private int _Telefono;
+        public int Telefono
         {
-
-            get { return; _subtotal }
-            set { _subtotal = value; }
+            get { return _Telefono; }
+            set { _Telefono = value; }
         }
-        private _total;
-            public decimal _total
+//Esta línea se encarga de asignar el valor del Email que se proporcionó al crear un nuevo cliente
+
+        private string _Email;
+        public string Email
         {
-
-            get { return; _total }
-            set { _total = value; }
+            get { return _Email; }
+            set { _Email = value; }
         }
-    }
-
     }
