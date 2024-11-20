@@ -11,10 +11,12 @@
 # Tabla de Contenidos
 - 🛠[Instalacion](#instalacion)
   - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦  
-  - [Clonar Repositorio](#clonar-repositorio) 📝  
+  - [Clonar Repositorio](#clonar-repositorio) 📝
+-  [Instalación de Base de Datos](#instacion-de-base-de-datos) 📝
+  - [Usar archivo bak](#usar-archivo-bak) 📝
 - ▶️[Ejecucion del Proyecto](#ejecucion-del-proyecto)
-  - [Requerimientos de Instalacion](#usar-la-tecla-F5) 
-  - [Clonar Repositorio](#usar-el-icono-play)  
+  - [Usar la Techa F5](#usar-la-tecla-F5) 
+  - [Usar el icono play](#usar-el-icono-play)  
 
 ## 🛠 Instalacion
 En esta sección se explica el proceso de instalación de todas las dependencias necesarias para ejecutar el proyecto.
@@ -22,6 +24,8 @@ En esta sección se explica el proceso de instalación de todas las dependencias
 ## Requerimientos de Instalacion 📦
 - [Visual Studio 2022 - Descarga]( https://visualstudio.microsoft.com/es/)
 - [.NET 8 SDK - Descarga](https://dotnet.microsoft.com/es-es/download)
+- [Git - Descarga]( [https://visualstudio.microsoft.com/es/](https://git-scm.com/))
+- [SQL Server - Descarga]([https://dotnet.microsoft.com/es-es/download](https://www.microsoft.com/es-es/sql-server/sql-server-downloads ))
 
 ### 📝Clonar Repositorio
 Abre Visual Studio.  
@@ -32,6 +36,27 @@ En el campo **Repositorio**, pega la URL del repositorio de GitHub:
 Tambien puedes descargar el zip del ultimo Commit del Repositorio
 
 ![image](https://github.com/user-attachments/assets/6014994f-9a31-4d89-a7cb-c7ddd71c4e6b)
+
+### Instalación de Base de Datos
+En esta parte se explicara el proceso de instalación de la base de datos.
+> ⚠️ **Warning**  
+> ⚠️ Recuerde tener instalado el [SQL Server]([https://www.microsoft.com/sql-server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads )).
+Tener el scrip o el archivo bak de la Base de Datos
+### Usar Archivo bak
+Abrir SQL Server  
+Inicia sesión en el servidor SQL donde deseas restaurar la base de datos.  
+Ir a la opción de restaurar  
+Hacer clic derecho sobre Bases de datos.   
+Selecciona la opción Restaurar base de datos.  
+Seleccionar la fuente de la restauración.  
+En la ventana de restauración, bajo Origen, selecciona la opción Dispositivo.  
+Haz clic en el botón de los tres puntos (...) al lado de Dispositivo.  
+En la nueva ventana, selecciona Agregar.  
+Busca el archivo .bak en tu sistema, selecciónalo y haz clic en Aceptar.  
+![image](https://github.com/user-attachments/assets/c3d59ace-0070-460a-920c-c82815947f11)
+
+> ⚠️ Recuerde cambiar el nombre del servidor por tu nombre
+
 
 ### ▶️ Ejecucion del Proyecto
 Ejecutar el Proyecto Presionando F5 o Usando el Botón "Iniciar"
