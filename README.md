@@ -13,7 +13,6 @@
   - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦  
   - [Clonar Repositorio](#clonar-repositorio) 📝
 -  [Instalación de Base de Datos](#instacion-de-base-de-datos) 📝  
-  - [Usar archivo bak](#usar-archivo-bak) 📝 
 - ▶️[Ejecucion del Proyecto](#ejecucion-del-proyecto)
   - [Usar la Techa F5](#usar-la-tecla-F5) 
   - [Usar el icono play](#usar-el-icono-play)  
@@ -47,7 +46,9 @@ Inicia sesión en el servidor SQL donde deseas restaurar la base de datos.
 Ir a la opción de restaurar  
 Hacer clic derecho sobre Bases de datos.   
 Selecciona la opción Restaurar base de datos.  
-Seleccionar la fuente de la restauración.  
+Seleccionar la fuente de la restauración. 
+![image](https://github.com/user-attachments/assets/b41afe00-60ad-4b2d-9750-31f828fbfe4c)  
+
 En la ventana de restauración, bajo Origen, selecciona la opción Dispositivo.  
 Haz clic en el botón de los tres puntos (...) al lado de Dispositivo.  
 En la nueva ventana, selecciona Agregar.  
