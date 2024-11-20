@@ -23,9 +23,10 @@ En esta sección se explica el proceso de instalación de todas las dependencias
 - [.NET 8 SDK - Descarga](https://dotnet.microsoft.com/es-es/download)
 
 ### 📝Clonar Repositorio
-Abre Visual Studio.
-En la pantalla principal, seleccionamos Clonar un repositorio.
-En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
+1. Abre Visual Studio.
+2. En la pantalla principal, selecciona *Clonar un repositorio*.
+3. En el campo **Repositorio**, pega la URL del repositorio de GitHub:  
+   [https://github.com/RicardoVillamar/Consecionaria-vehiculos.git](https://github.com/RicardoVillamar/Consecionaria-vehiculos.git).
 
 Tambien puedes decargar el zip del ultimo Commit del Repositorio
 
