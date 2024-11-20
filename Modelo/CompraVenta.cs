@@ -60,6 +60,11 @@ namespace Modelo
             set { _total = value; }
         }
 
+        // Constructor
+
+
+
+
     }
 
 

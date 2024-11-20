@@ -14,6 +14,7 @@ namespace Vista
 {
     public partial class FrmServicioRegistrar : Form
     {
+        // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
         public FrmServicioRegistrar()
         {
             InitializeComponent();
@@ -76,28 +77,47 @@ namespace Vista
         private void button1_Click(object sender, EventArgs e)
         {
             CtrlServicios ser = new CtrlServicios();
-            string servicios = cmbServicio.SelectedItem.ToString();
-            string tipoVehiculo = cmbTipoVehiculo.SelectedItem.ToString();
-            string cedula = txtCedula.Text;
+            string servicios = cmbServicio.SelectedItem?.ToString();  
+            string tipoVehiculo = cmbTipoVehiculo.SelectedItem?.ToString();
+            string cedula = txtCedula.Text.Trim();
             DateTime fecha = dtpFecha.Value;
-            string descripServicio = txtDescripcion.Text;
-            float costo = float.Parse(txtCosto.Text);
-            string id = ser.generarId();
+            float costo;
 
+            if (string.IsNullOrWhiteSpace(tipoVehiculo))
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de vehículo.");
+                return;
+            }
             if (string.IsNullOrWhiteSpace(cedula))
             {
                 MessageBox.Show("Por favor, ingrese la cédula del cliente.");
                 return;
             }
-            if (cedula != null)
+            if (string.IsNullOrWhiteSpace(servicios))
             {
-                ser.RegistrarServicio(id, tipoVehiculo, cedula, servicios, fecha, descripServicio, costo);
-                MessageBox.Show("Se ha registrado exitosamente");
-                this.Close();
-
+                MessageBox.Show("Por favor, seleccione un servicio.");
+                return;
+            }     
+            if (!float.TryParse(txtCosto.Text, out costo))
+            {
+                MessageBox.Show("El costo debe ser un número válido.");
+                return;
             }
+
+            string id = ser.generarId();
+            ser.RegistrarServicio(id, tipoVehiculo, cedula, servicios, fecha, costo);
+            MessageBox.Show("Se ha registrado exitosamente");
+            FrmServicioReporte frmReporte = Application.OpenForms.OfType<FrmServicioReporte>().FirstOrDefault();
+            if (frmReporte != null)
+            {
+                frmReporte.ActualizarDataGridView();
+            }
+
+            this.Close();
 
         }
 
     }
+
 }
+

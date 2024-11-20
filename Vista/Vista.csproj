@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +57,18 @@
     </Compile>
     <Compile Include="FrmClienteActualizar.Designer.cs">
       <DependentUpon>FrmClienteActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCliReporteXCedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCliReporteXCedula.Designer.cs">
+      <DependentUpon>FrmCliReporteXCedula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCliReporteXNombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCliReporteXNombre.Designer.cs">
+      <DependentUpon>FrmCliReporteXNombre.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCompraVentaReporte.cs">
       <SubType>Form</SubType>
@@ -76,11 +94,41 @@
     <Compile Include="FrmServicioActualizar.Designer.cs">
       <DependentUpon>FrmServicioActualizar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSReporteXServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSReporteXServicio.Designer.cs">
+      <DependentUpon>FrmSReporteXServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSReporteXCedula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSReporteXCedula.Designer.cs">
+      <DependentUpon>FrmSReporteXCedula.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmServicioReporte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmServicioReporte.Designer.cs">
       <DependentUpon>FrmServicioReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVehiculoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVehiculoActualizar.Designer.cs">
+      <DependentUpon>FrmVehiculoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVReporteXEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVReporteXEstado.Designer.cs">
+      <DependentUpon>FrmVReporteXEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVReporteXMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVReporteXMarca.Designer.cs">
+      <DependentUpon>FrmVReporteXMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVehiculoRegistrar.cs">
       <SubType>Form</SubType>
@@ -117,6 +165,12 @@
     <EmbeddedResource Include="FrmClienteActualizar.resx">
       <DependentUpon>FrmClienteActualizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCliReporteXCedula.resx">
+      <DependentUpon>FrmCliReporteXCedula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCliReporteXNombre.resx">
+      <DependentUpon>FrmCliReporteXNombre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCompraVentaReporte.resx">
       <DependentUpon>FrmCompraVentaReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +183,23 @@
     <EmbeddedResource Include="FrmServicioActualizar.resx">
       <DependentUpon>FrmServicioActualizar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSReporteXServicio.resx">
+      <DependentUpon>FrmSReporteXServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSReporteXCedula.resx">
+      <DependentUpon>FrmSReporteXCedula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmServicioReporte.resx">
       <DependentUpon>FrmServicioReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVehiculoActualizar.resx">
+      <DependentUpon>FrmVehiculoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVReporteXEstado.resx">
+      <DependentUpon>FrmVReporteXEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVReporteXMarca.resx">
+      <DependentUpon>FrmVReporteXMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculoRegistrar.resx">
       <DependentUpon>FrmVehiculoRegistrar.cs</DependentUpon>
@@ -156,6 +225,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

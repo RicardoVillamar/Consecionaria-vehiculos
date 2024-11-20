@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Vista
 {
+    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public partial class FrmVehiculoRegistrar : Form
     {
         CtrlVehiculo ctrlVehiculo = new CtrlVehiculo();
@@ -60,44 +61,47 @@ namespace Vista
             string tipoCombustible = txtCombustible.Text;
             string kilometraje = txtKilometraje.Text;
             string precio = txtPrecio.Text;
-
-            //Datos Automovil
-            string nPuertas = txtNPuertas.Text;
-            string tipoTransmision = (string)cmbTipoTransmision.Text;
-            string tipoAuto = (string)cmbTipoAuto.Text;
-
-            //Datos Camion
-            string capacidadCarga = txtCapacidadCarga.Text;
-            string tipoCarga = (string)cmbTipoCarga.Text;
-
-            //Datos Motocicleta
-            string tipoMoto = (string)cmbTipoMoto.Text;
-            string ruedas = txtNRuedas.Text;
-            string tipoFreno = (string)cmbTipoFreno.Text;
-
+ 
             string msj;
 
             if (tipoVehiculo.Equals("Automovil"))
-            {           
+            {
+                //Datos Automovil
+                string nPuertas = txtNPuertas.Text;
+                string tipoTransmision = (string)cmbTipoTransmision.Text;
+                string tipoAuto = (string)cmbTipoAuto.Text;
+
                 string id = valH.GenerarId();
                 string ida = valH.GenerarId();
-                msj = ctrlVehiculo.IngresarAuto(id, marca, color, tipoVehiculo, estado, tipoCombustible, kilometraje, precio, ida, nPuertas, tipoTransmision, tipoAuto);
-                MessageBox.Show(msj, "Registro");         
+                msj = ctrlVehiculo.IngresarAuto(id, marca, tipoVehiculo, tipoCombustible, color, estado, kilometraje, precio, ida, nPuertas, tipoTransmision, tipoAuto);
+                MessageBox.Show("Registro Automovil Exitoso");
                 ctrlVehiculo.LimpiarAuto(txtMarca, txtColor, cmbTipoVehiculo, cmbEstado, txtCombustible, txtKilometraje, txtPrecio, txtNPuertas, cmbTipoTransmision, cmbTipoAuto);
-            } else if (tipoVehiculo.Equals("Camion"))
+            }
+            else if (tipoVehiculo.Equals("Camion"))
             {
+                //Datos Camion
+                string capacidadCarga = txtCapacidadCarga.Text;
+                string tipoCarga = (string)cmbTipoCarga.Text;
+
                 string id = valH.GenerarId();
                 string idc = valH.GenerarId();
-                msj = ctrlVehiculo.IngresarCamion(id, marca, color, tipoVehiculo, estado, tipoCombustible, kilometraje, precio, idc, capacidadCarga, tipoCarga);
-                MessageBox.Show(msj, "Registro");
+                msj = ctrlVehiculo.IngresarCamion(id, marca, tipoVehiculo, tipoCombustible, color, estado, kilometraje, precio, idc, capacidadCarga, tipoCarga);
+                MessageBox.Show("Registro Camion Exitoso");
                 ctrlVehiculo.LimpiarCamion(txtMarca, txtColor, cmbTipoVehiculo, cmbEstado, txtCombustible, txtKilometraje, txtPrecio, txtCapacidadCarga, cmbTipoCarga);
 
-            } else if (tipoVehiculo.Equals("Motocicleta"))
+            }
+            else if (tipoVehiculo.Equals("Motocicleta"))
             {
+                //Datos Motocicleta
+                string tipoMoto = (string)cmbTipoMoto.Text;
+                string ruedas = txtNRuedas.Text;
+                string tipoFreno = (string)cmbTipoFreno.Text;
+
+
                 string id = valH.GenerarId();
                 string idm = valH.GenerarId();
-                msj = ctrlVehiculo.IngresarMoto(id, marca, color, tipoVehiculo, estado, tipoCombustible, kilometraje, precio, idm, tipoMoto, ruedas, tipoFreno);
-                MessageBox.Show(msj, "Registro");
+                msj = ctrlVehiculo.IngresarMoto(id, marca, tipoVehiculo, tipoCombustible, color, estado, kilometraje, precio, idm, tipoMoto, ruedas, tipoFreno);
+                MessageBox.Show("Registro Motocicleta Exitoso");
                 ctrlVehiculo.LimpiarMoto(txtMarca, txtColor, cmbTipoVehiculo, cmbEstado, txtCombustible, txtKilometraje, txtPrecio, cmbTipoMoto, txtNRuedas, cmbTipoFreno);
             }
             else
@@ -197,6 +201,10 @@ namespace Vista
             }
         }
 
-
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+           CtrlConn ctrlc = new CtrlConn();
+            ctrlc.conectar();
+        }
     }
 }

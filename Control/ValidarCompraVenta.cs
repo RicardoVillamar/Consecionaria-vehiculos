@@ -11,29 +11,36 @@ namespace Control
     {
         public static bool ValidarDatosDetalle(DataGridView grid)
         {
-            bool esValido = true;
+            bool valido = true;
             int i = 0;
 
-            if (grid.RowCount == 1)
-                return !esValido;
+            if (grid.RowCount == 1) return !valido;
 
             foreach (DataGridViewRow row in grid.Rows)
             {
-                decimal Cantidad = ValidarCompraVenta.aDecimal(row.Cells["colCantidad"].Value.ToString());
+                try
+                {
+                    int Cantidad = ValidarCompraVenta.aEnteroPositivo(row.Cells["Cantidad"].Value.ToString());
+                    decimal PrecioUnitario = ValidarCompraVenta.aDecimal(row.Cells["PrecioUnitario"].Value.ToString());
 
-                if (row.Cells["colCantidad"].Value == null || row.Cells["colDescripcion"].Value == null || row.Cells["colPrecioUnitario"].Value == null)
-                    return !esValido;
+                    if(Cantidad == -1)
+                        valido = false;
 
-                if (row.Cells["colCantidad"].Value.ToString().Contains(".") ||
-                    row.Cells["colPrecioUnitario"].Value.ToString().Contains("."))
-                    return !esValido;
+                    if (PrecioUnitario < 500)
+                        valido = false;
+ 
+                }
+                catch (Exception ex)
+                {
+                    valido = false;
+                }
 
-                if (Cantidad <= 0)
-                    return !esValido;
-
+                if(!valido) break;
+                
                 if (++i == grid.RowCount - 1) break;
             }
-            return esValido;
+
+            return valido;
         }
 
         public static bool ValidarCedula(string cedula)
@@ -57,17 +64,19 @@ namespace Control
 
         public static decimal aDecimal(string valor)
         {
+            decimal number;
             try
             {
-                return Decimal.Parse(valor);
+                Decimal.TryParse(valor, out number);
+                return number;
             }
             catch
             {
-                return -1;
+                return 0;
             }
         }
 
-        public static int aEntero(string valor)
+        public static int aEnteroPositivo(string valor)
         {
             try
             {

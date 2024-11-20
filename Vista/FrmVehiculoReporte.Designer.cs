@@ -30,18 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVehiculoReporte));
             this.dgvReporteVehiculo = new System.Windows.Forms.DataGridView();
+            this.colIdVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoVehiculo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTipoCombustible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRetirar = new System.Windows.Forms.Button();
-            this.cmbFiltro = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGenerarPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,59 +50,81 @@
             this.dgvReporteVehiculo.AllowUserToDeleteRows = false;
             this.dgvReporteVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReporteVehiculo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdVehiculo,
             this.colMarca,
-            this.colColor,
             this.colTipoVehiculo,
-            this.colEstado,
             this.colTipoCombustible,
+            this.colColor,
+            this.colEstado,
             this.colPrecio});
-            this.dgvReporteVehiculo.Location = new System.Drawing.Point(35, 206);
+            this.dgvReporteVehiculo.Location = new System.Drawing.Point(12, 170);
             this.dgvReporteVehiculo.Name = "dgvReporteVehiculo";
             this.dgvReporteVehiculo.ReadOnly = true;
+            this.dgvReporteVehiculo.RowHeadersWidth = 62;
             this.dgvReporteVehiculo.Size = new System.Drawing.Size(641, 331);
             this.dgvReporteVehiculo.TabIndex = 0;
+            // 
+            // colIdVehiculo
+            // 
+            this.colIdVehiculo.HeaderText = "Id";
+            this.colIdVehiculo.MinimumWidth = 8;
+            this.colIdVehiculo.Name = "colIdVehiculo";
+            this.colIdVehiculo.ReadOnly = true;
+            this.colIdVehiculo.Width = 150;
             // 
             // colMarca
             // 
             this.colMarca.HeaderText = "Marca";
+            this.colMarca.MinimumWidth = 8;
             this.colMarca.Name = "colMarca";
             this.colMarca.ReadOnly = true;
-            // 
-            // colColor
-            // 
-            this.colColor.HeaderText = "Color";
-            this.colColor.Name = "colColor";
-            this.colColor.ReadOnly = true;
+            this.colMarca.Width = 150;
             // 
             // colTipoVehiculo
             // 
             this.colTipoVehiculo.HeaderText = "Tipo de Vehiculo";
+            this.colTipoVehiculo.MinimumWidth = 8;
             this.colTipoVehiculo.Name = "colTipoVehiculo";
             this.colTipoVehiculo.ReadOnly = true;
-            // 
-            // colEstado
-            // 
-            this.colEstado.HeaderText = "Estado";
-            this.colEstado.Name = "colEstado";
-            this.colEstado.ReadOnly = true;
+            this.colTipoVehiculo.Width = 150;
             // 
             // colTipoCombustible
             // 
             this.colTipoCombustible.HeaderText = "Tipo de Combustible";
+            this.colTipoCombustible.MinimumWidth = 8;
             this.colTipoCombustible.Name = "colTipoCombustible";
             this.colTipoCombustible.ReadOnly = true;
+            this.colTipoCombustible.Width = 150;
+            // 
+            // colColor
+            // 
+            this.colColor.HeaderText = "Color";
+            this.colColor.MinimumWidth = 8;
+            this.colColor.Name = "colColor";
+            this.colColor.ReadOnly = true;
+            this.colColor.Width = 150;
+            // 
+            // colEstado
+            // 
+            this.colEstado.HeaderText = "Estado";
+            this.colEstado.MinimumWidth = 8;
+            this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
+            this.colEstado.Width = 150;
             // 
             // colPrecio
             // 
             this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.MinimumWidth = 8;
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
+            this.colPrecio.Width = 150;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(225, 22);
+            this.label6.Location = new System.Drawing.Point(205, 28);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(252, 29);
@@ -113,70 +134,45 @@
             // btnRetirar
             // 
             this.btnRetirar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetirar.Location = new System.Drawing.Point(467, 108);
+            this.btnRetirar.Location = new System.Drawing.Point(448, 104);
+            this.btnRetirar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRetirar.Name = "btnRetirar";
-            this.btnRetirar.Size = new System.Drawing.Size(155, 43);
+            this.btnRetirar.Size = new System.Drawing.Size(146, 33);
             this.btnRetirar.TabIndex = 19;
             this.btnRetirar.Text = "Retirar";
             this.btnRetirar.UseVisualStyleBackColor = true;
             this.btnRetirar.Click += new System.EventHandler(this.btnRetirar_Click);
             // 
-            // cmbFiltro
+            // btnActualizar
             // 
-            this.cmbFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFiltro.FormattingEnabled = true;
-            this.cmbFiltro.Items.AddRange(new object[] {
-            "Usado",
-            "NoUsado"});
-            this.cmbFiltro.Location = new System.Drawing.Point(81, 153);
-            this.cmbFiltro.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbFiltro.Name = "cmbFiltro";
-            this.cmbFiltro.Size = new System.Drawing.Size(179, 24);
-            this.cmbFiltro.TabIndex = 37;
-            this.cmbFiltro.SelectedIndexChanged += new System.EventHandler(this.cmbFiltro_SelectedIndexChanged);
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(86, 104);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(146, 33);
+            this.btnActualizar.TabIndex = 40;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // label2
+            // btnGenerarPDF
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 134);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Filtro";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Marca";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.Location = new System.Drawing.Point(81, 95);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(179, 23);
-            this.txtMarca.TabIndex = 38;
-            this.txtMarca.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMarca_KeyDown);
+            this.btnGenerarPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarPDF.Location = new System.Drawing.Point(260, 526);
+            this.btnGenerarPDF.Name = "btnGenerarPDF";
+            this.btnGenerarPDF.Size = new System.Drawing.Size(153, 33);
+            this.btnGenerarPDF.TabIndex = 41;
+            this.btnGenerarPDF.Text = "Generar PDF";
+            this.btnGenerarPDF.UseVisualStyleBackColor = true;
+            this.btnGenerarPDF.Click += new System.EventHandler(this.btnGenerarPDF_Click);
             // 
             // FrmVehiculoReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 578);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtMarca);
-            this.Controls.Add(this.cmbFiltro);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(660, 598);
+            this.Controls.Add(this.btnGenerarPDF);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnRetirar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvReporteVehiculo);
@@ -198,15 +194,14 @@
         private System.Windows.Forms.DataGridView dgvReporteVehiculo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRetirar;
-        private System.Windows.Forms.ComboBox cmbFiltro;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIdVehiculo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoVehiculo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTipoCombustible;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.Button btnGenerarPDF;
     }
 }

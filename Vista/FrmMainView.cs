@@ -69,5 +69,41 @@ namespace Vista
             FrmCompraVentaReporte frmCompraVentaReporte = new FrmCompraVentaReporte();
             frmCompraVentaReporte.ShowDialog();
         }
+
+        private void reporteVehiculoPorEstadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVReporteXEstado frmVehiculoEstado = new FrmVReporteXEstado();
+            frmVehiculoEstado.ShowDialog();
+        }
+
+        private void reporteVehiculoPorMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVReporteXMarca frmVehiculoMarca = new FrmVReporteXMarca();
+            frmVehiculoMarca.ShowDialog();
+        }
+
+        private void reporteServicioPorCedulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSReporteXCedula rgtCedBus = new FrmSReporteXCedula();
+            rgtCedBus.ShowDialog();
+        }
+
+        private void reporeteServiciosPorServiciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSReporteXServicio rgtServBus = new FrmSReporteXServicio();
+            rgtServBus.ShowDialog();
+        }
+
+        private void reporteClientesPorCedulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliReporteXCedula frmCedula = new FrmCliReporteXCedula();
+            frmCedula.ShowDialog();
+        }
+
+        private void reporteClientesPorNombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliReporteXNombre frmNombre = new FrmCliReporteXNombre();
+            frmNombre.ShowDialog();
+        }
     }
 }

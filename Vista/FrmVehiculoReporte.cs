@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace Vista
 {
+    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public partial class FrmVehiculoReporte : Form
     {
         CtrlVehiculo Ctrlvh = new CtrlVehiculo();
@@ -18,6 +19,7 @@ namespace Vista
         public FrmVehiculoReporte()
         {
             InitializeComponent();
+            dgvReporteVehiculo.Columns["colIdVehiculo"].Visible = false;
             Ctrlvh.LlenarReporte(dgvReporteVehiculo);
         }
 
@@ -26,16 +28,40 @@ namespace Vista
             if (dgvReporteVehiculo.SelectedRows.Count > 0)
             {
                 int rowIndex = dgvReporteVehiculo.SelectedRows[0].Index;
-                string msj = Ctrlvh.RetirarVehiculo(rowIndex);
+                string id = dgvReporteVehiculo.Rows[rowIndex].Cells["colIdVehiculo"].Value.ToString();
+                string msj = Ctrlvh.EliminarVh(id);
 
                 if (msj.Contains("correctamente"))
                 {
                     dgvReporteVehiculo.Rows.RemoveAt(rowIndex);
-                    MessageBox.Show(msj);
+                    MessageBox.Show("Vehiculo Retirado Correctamente");
                 }
                 else
                 {
-                    MessageBox.Show(msj);
+                    MessageBox.Show("El Vehiculo No Se Retirado");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila");
+            }
+            Ctrlvh.LlenarReporte(dgvReporteVehiculo);
+        
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if (dgvReporteVehiculo.SelectedRows.Count > 0)
+            {
+                DataGridViewRow rowS = dgvReporteVehiculo.SelectedRows[0];
+                string id = rowS.Cells["colIdVehiculo"].Value.ToString();
+                string color = rowS.Cells["colColor"].Value.ToString();
+                string tipo = rowS.Cells["colTipoCombustible"].Value.ToString();
+                FrmVehiculoActualizar frmAV = new FrmVehiculoActualizar();
+                frmAV.SetDatos(id, color, tipo);
+                if (frmAV.ShowDialog() == DialogResult.OK)
+                {
+                   ActualizarFila(id);
                 }
             }
             else
@@ -44,41 +70,22 @@ namespace Vista
             }
         }
 
-        private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        private void ActualizarFila(string id)
         {
-            string estadoSeleccionado = cmbFiltro.SelectedItem.ToString();
-            foreach (DataGridViewRow row in dgvReporteVehiculo.Rows)
+            foreach (DataGridViewRow fila in dgvReporteVehiculo.Rows)
             {
-                if (row.Cells[3].Value != null && row.Cells[3].Value.ToString() == estadoSeleccionado)
+                if (fila.Cells[0].Value.ToString() == id)
                 {
-                    row.Visible = true;
-                }
-                else
-                {
-                    row.Visible = false;
+                    Ctrlvh.ActualizarFilaEnGrid(fila, id);
+                    break;
                 }
             }
-
         }
 
-        private void txtMarca_KeyDown(object sender, KeyEventArgs e)
+        private void btnGenerarPDF_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                string marcaBuscada = txtMarca.Text.Trim().ToUpper();
-                foreach (DataGridViewRow row in dgvReporteVehiculo.Rows)
-                {
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString().ToUpper().Contains(marcaBuscada))
-                    {
-                        row.Visible = true;
-                    }
-                    else
-                    {
-                        row.Visible = false;
-                    }
-                }
-                txtMarca.Clear();
-            }
+            Ctrlvh.GenerarPDF();
+            Ctrlvh.AbrirPDF();
         }
     }
 }

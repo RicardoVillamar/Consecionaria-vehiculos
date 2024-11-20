@@ -139,7 +139,7 @@
             // 
             this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.Location = new System.Drawing.Point(103, 96);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMarca.MaxLength = 50;
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(179, 23);
@@ -155,7 +155,7 @@
             "Usado",
             "NoUsado"});
             this.cmbEstado.Location = new System.Drawing.Point(439, 144);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(179, 24);
             this.cmbEstado.TabIndex = 9;
@@ -164,7 +164,7 @@
             // 
             this.txtCombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCombustible.Location = new System.Drawing.Point(103, 197);
-            this.txtCombustible.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCombustible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCombustible.MaxLength = 50;
             this.txtCombustible.Name = "txtCombustible";
             this.txtCombustible.Size = new System.Drawing.Size(179, 23);
@@ -175,7 +175,7 @@
             // 
             this.txtColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColor.Location = new System.Drawing.Point(439, 96);
-            this.txtColor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtColor.MaxLength = 50;
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(179, 23);
@@ -186,7 +186,7 @@
             // 
             this.txtKilometraje.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKilometraje.Location = new System.Drawing.Point(439, 197);
-            this.txtKilometraje.Margin = new System.Windows.Forms.Padding(2);
+            this.txtKilometraje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtKilometraje.MaxLength = 10;
             this.txtKilometraje.Name = "txtKilometraje";
             this.txtKilometraje.Size = new System.Drawing.Size(179, 23);
@@ -214,7 +214,7 @@
             "Camion",
             "Motocicleta"});
             this.cmbTipoVehiculo.Location = new System.Drawing.Point(103, 144);
-            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoVehiculo.Name = "cmbTipoVehiculo";
             this.cmbTipoVehiculo.Size = new System.Drawing.Size(179, 24);
             this.cmbTipoVehiculo.TabIndex = 16;
@@ -223,10 +223,10 @@
             // btnRegistrarVehiculo
             // 
             this.btnRegistrarVehiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarVehiculo.Location = new System.Drawing.Point(457, 495);
-            this.btnRegistrarVehiculo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrarVehiculo.Location = new System.Drawing.Point(473, 495);
+            this.btnRegistrarVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegistrarVehiculo.Name = "btnRegistrarVehiculo";
-            this.btnRegistrarVehiculo.Size = new System.Drawing.Size(179, 53);
+            this.btnRegistrarVehiculo.Size = new System.Drawing.Size(164, 35);
             this.btnRegistrarVehiculo.TabIndex = 17;
             this.btnRegistrarVehiculo.Text = "Registrar";
             this.btnRegistrarVehiculo.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.Location = new System.Drawing.Point(103, 248);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecio.MaxLength = 6;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(179, 23);
@@ -264,7 +264,7 @@
             "Electrico",
             "Hibrido"});
             this.cmbTipoAuto.Location = new System.Drawing.Point(152, 101);
-            this.cmbTipoAuto.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoAuto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoAuto.Name = "cmbTipoAuto";
             this.cmbTipoAuto.Size = new System.Drawing.Size(142, 24);
             this.cmbTipoAuto.TabIndex = 53;
@@ -289,7 +289,7 @@
             "Manual",
             "Automatico"});
             this.cmbTipoTransmision.Location = new System.Drawing.Point(152, 68);
-            this.cmbTipoTransmision.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoTransmision.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoTransmision.Name = "cmbTipoTransmision";
             this.cmbTipoTransmision.Size = new System.Drawing.Size(142, 24);
             this.cmbTipoTransmision.TabIndex = 51;
@@ -309,7 +309,7 @@
             // 
             this.txtNPuertas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNPuertas.Location = new System.Drawing.Point(183, 35);
-            this.txtNPuertas.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNPuertas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNPuertas.MaxLength = 1;
             this.txtNPuertas.Name = "txtNPuertas";
             this.txtNPuertas.Size = new System.Drawing.Size(111, 23);
@@ -361,7 +361,7 @@
             // 
             this.txtCapacidadCarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCapacidadCarga.Location = new System.Drawing.Point(184, 28);
-            this.txtCapacidadCarga.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCapacidadCarga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCapacidadCarga.MaxLength = 5;
             this.txtCapacidadCarga.Name = "txtCapacidadCarga";
             this.txtCapacidadCarga.Size = new System.Drawing.Size(111, 23);
@@ -390,7 +390,7 @@
             "Peligrosa",
             "General"});
             this.cmbTipoCarga.Location = new System.Drawing.Point(116, 67);
-            this.cmbTipoCarga.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoCarga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoCarga.Name = "cmbTipoCarga";
             this.cmbTipoCarga.Size = new System.Drawing.Size(179, 24);
             this.cmbTipoCarga.TabIndex = 39;
@@ -432,7 +432,7 @@
             "Tambor",
             "ABS"});
             this.cmbTipoFreno.Location = new System.Drawing.Point(115, 96);
-            this.cmbTipoFreno.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoFreno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoFreno.Name = "cmbTipoFreno";
             this.cmbTipoFreno.Size = new System.Drawing.Size(179, 24);
             this.cmbTipoFreno.TabIndex = 47;
@@ -452,7 +452,7 @@
             // 
             this.txtNRuedas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNRuedas.Location = new System.Drawing.Point(183, 63);
-            this.txtNRuedas.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNRuedas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNRuedas.MaxLength = 1;
             this.txtNRuedas.Name = "txtNRuedas";
             this.txtNRuedas.Size = new System.Drawing.Size(111, 23);
@@ -480,7 +480,7 @@
             "Deportiva",
             "Touring"});
             this.cmbTipoMoto.Location = new System.Drawing.Point(115, 32);
-            this.cmbTipoMoto.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTipoMoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoMoto.Name = "cmbTipoMoto";
             this.cmbTipoMoto.Size = new System.Drawing.Size(179, 24);
             this.cmbTipoMoto.TabIndex = 43;
@@ -523,7 +523,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmVehiculoRegistrar";

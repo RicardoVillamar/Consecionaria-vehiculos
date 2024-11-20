@@ -24,14 +24,13 @@ namespace Modelo
         public string DescripServicio { get => descripServicio; set => descripServicio = value; }
         public float Costo { get => costo; set => costo = value; }
 
-        public Servicio(string idServicio, string tipoVehiculo, string cedula, string servicios, DateTime fecha, string descripServicio, float costo)
+        public Servicio(string idServicio, string tipoVehiculo, string cedula, string servicios, DateTime fecha,  float costo)
         {
             IdServicio = idServicio;
             TipoVehiculo = tipoVehiculo;
             Cedula = cedula;
             Servicios = servicios;
             Fecha = fecha;
-            DescripServicio = descripServicio;
             Costo = costo;
         }
 

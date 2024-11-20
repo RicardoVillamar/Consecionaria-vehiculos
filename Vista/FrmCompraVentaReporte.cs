@@ -13,44 +13,67 @@ namespace Vista
 {
     public partial class FrmCompraVentaReporte : Form
     {
-        CtrlCompraVenta ctrlCV = new CtrlCompraVenta();
+        CtrlCompraVenta controlador = new CtrlCompraVenta();
         public FrmCompraVentaReporte()
         {
             InitializeComponent();
-            ctrlCV.LlenarGrid(dgvReporteCompraVenta);
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void Reporte_Click(object sender, EventArgs e)
         {
-
-            string error = "";
-
-            if (!ValidarCompraVenta.ValidarCedula(txtCedula.Text.Trim()))
-                error += "Cedula invalida, debe tener 10 digitos numericos \n";
-
-            if (cmbTipo.Text.Equals(""))
-                error += "Se debe escojer un tipo. (Compra o Venta) \n";
-
-            if (error.Length > 0)
+            if (TablaReporteCompraVenta.Rows.Count == 0)
             {
-                MessageBox.Show("- Registro invalido, Tomar en cuenta que: \n" + error);
+                MessageBox.Show("Se debe filtrar los registros.");
                 return;
             }
 
-            ctrlCV.Reporte(dgvReporteCompraVenta, txtCedula.Text.Trim(), cmbTipo.Text);
-
-            txtCedula.Text = "";
-            cmbTipo.SelectedItem = null;
+            controlador.GenerarPDF(TablaReporteCompraVenta);
+            controlador.AbrirPDF();
         }
 
-        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnFiltrarReporte_Click(object sender, EventArgs e)
         {
-            char n = e.KeyChar;
-            if (!char.IsDigit(n) && n != ' ' && n != (char)Keys.Back)
+            string mensaje = controlador.Reporte(
+                TablaReporteCompraVenta,
+                cmbTipo.Text,
+                campoCedula.Text
+            );
+
+            if (mensaje[0] == '0')
+                this.LimpiarCampos();
+
+            MessageBox.Show(mensaje);
+        }
+
+        private void TablaReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == 5 && e.RowIndex != -1)
             {
+                string cedula = TablaReporteCompraVenta.Rows[e.RowIndex].Cells["Cedula"].Value.ToString();
+                DialogResult msj = MessageBox.Show("¿Deseas eliminar las ventas del cliente?", "Confirmación", MessageBoxButtons.OKCancel);
+
+                if (msj == DialogResult.OK)
+                {
+                    controlador.Eliminar(cedula);
+                    TablaReporteCompraVenta.Rows.Clear();    
+                }
+            }
+
+        }
+
+        private void LimpiarCampos()
+        {
+            cmbTipo.ResetText();
+            campoCedula.Text = "";
+            TablaReporteCompraVenta.Rows.Clear();
+        }
+        private void campoCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+
+            if (!char.IsDigit(c) && c != ' ' && c != (char)Keys.Back)
                 e.Handled = true;
-                return;
-            }
         }
     }
 }

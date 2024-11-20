@@ -14,7 +14,7 @@ namespace Vista
     public partial class FrmServicioActualizar : Form
     {
         CtrlServicios ctrlser = new CtrlServicios();
-        private string cedulaOriginal;
+        private string idServi;
         public FrmServicioActualizar()
         {
             InitializeComponent();
@@ -44,9 +44,9 @@ namespace Vista
             }
         }
 
-        public void SetDatos(string cedula, string tipodeVehiculo, string servicio, DateTime fecha, float costo)
+        public void SetDatos(string idServ, string tipodeVehiculo, string servicio, DateTime fecha, float costo)
         {
-            cedulaOriginal = cedula;
+            idServi = idServ;
             cmbServicio.SelectedItem = servicio;
             cmbTipodeVehiculo.SelectedItem = tipodeVehiculo;
             dtpFecha.Value = fecha;
@@ -56,9 +56,9 @@ namespace Vista
         public (string, string, string, DateTime, float) GetDatosActualizados()
         {
             return (
+                idServi,
                 cmbTipodeVehiculo.SelectedItem.ToString(),
                 cmbServicio.SelectedItem.ToString(),
-                cedulaOriginal,
                 dtpFecha.Value,
                 float.Parse(txtCosto.Text)
             );
@@ -71,7 +71,7 @@ namespace Vista
             DateTime fecha = dtpFecha.Value;
             float costo = float.Parse(txtCosto.Text);
 
-            ctrlser.ModificarServicio(cedulaOriginal, tipoVehiculo, servicios, fecha, costo);
+            ctrlser.ModificarServicio(idServi, tipoVehiculo, servicios, fecha, costo);
 
             MessageBox.Show("Se ha modificado exitosamente");
             this.DialogResult = DialogResult.OK;

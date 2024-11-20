@@ -47,8 +47,8 @@ namespace Modelo
 
         //Esta línea se encarga de asignar el valor del telefono que se proporcionó al crear un nuevo cliente
 
-        private int _Telefono;
-        public int Telefono
+        private string _Telefono;
+        public string Telefono
         {
             get { return _Telefono; }
             set { _Telefono = value; }
@@ -60,6 +60,22 @@ namespace Modelo
         {
             get { return _Email; }
             set { _Email = value; }
+        }
+
+
+        //Constructor de la clase Cliente
+        public Cliente(string idCliente, string nombre, string apellido, string cedula, string telefono, string email)
+        {
+            IdCliente = idCliente;
+            Nombre = nombre;
+            Apellido = apellido;
+            Cedula = cedula;
+            Telefono = telefono;
+            Email = email;
+        }
+
+        public Cliente()
+        {
         }
     }
 }

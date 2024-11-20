@@ -191,6 +191,7 @@
             this.Name = "FrmClienteRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmRegistrarCliente";
+            this.Load += new System.EventHandler(this.FrmClienteRegistrar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -61,46 +61,15 @@ namespace Vista
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
             CtrlCliente client = new CtrlCliente();
-            string nombreCliente = txtNombre.Text;
-            string apellidoCliente = txtApellido.Text;
-            string cedulaCliente = txtCedula.Text;
-            string telefonoCliente = txtTelefono.Text;
-            string correoCliente = txtCorreo.Text;
-            string id = client.generarId();
-
-            if (string.IsNullOrWhiteSpace(nombreCliente))
+            string Nombrecliente = txtNombre.Text;
+            string Apellidocliente = txtApellido.Text;
+            string Cedulacliente = txtCedula.Text;
+            string Telefonocliente = txtTelefono.Text;
+            string Correocliente = txtCorreo.Text;
+            string idCliente = client.generarId();
+            if (Cedulacliente != null)
             {
-                MessageBox.Show("Por favor, ingrese su nombre.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(apellidoCliente))
-            {
-                MessageBox.Show("Por favor, ingrese su apellido.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(cedulaCliente))
-            {
-                MessageBox.Show("Por favor, ingrese la cédula del cliente.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(telefonoCliente))
-            {
-                MessageBox.Show("Por favor, ingrese el numero de telefono.");
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(correoCliente))
-            {
-                MessageBox.Show("Por favor, ingrese el correo del cliente.");
-                return;
-            }
-
-            if (cedulaCliente != null)
-            {
-                client.RegistrarCliente(id, nombreCliente, apellidoCliente, cedulaCliente, telefonoCliente, correoCliente);
+                client.RegistrarCliente(idCliente, Nombrecliente, Apellidocliente, Cedulacliente, Telefonocliente, Correocliente);
                 MessageBox.Show("Se ha registrado correctamente");
                 this.Close();
 
@@ -123,6 +92,11 @@ namespace Vista
                 txtTelefono.Text = txtTelefono.Text.Substring(0, 10);
                 txtTelefono.SelectionStart = txtTelefono.Text.Length;
             }
+        }
+
+        private void FrmClienteRegistrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

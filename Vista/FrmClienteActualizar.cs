@@ -14,15 +14,15 @@ namespace Vista
     public partial class FrmClienteActualizar : Form
     {
         CtrlCliente ctrlcliente = new CtrlCliente();
-        private string nombreun;
+        private string id;
         public FrmClienteActualizar()
         {
             InitializeComponent();
         }
 
-        public void SetDatos(string nombre, string telefono, string correo)
+        public void SetDatos(string idn, string telefono, string correo)
         {
-            nombreun = nombre;
+            id = idn;
             txtTelefono.Text = telefono.ToString();
             txtCorreo.Text = correo.ToString();
         }
@@ -30,7 +30,7 @@ namespace Vista
         public (string, string, string) GetDatosActualizados()
         {
             return (
-                nombreun,
+                id,
                 txtTelefono.Text,
                 txtCorreo.Text
             );
@@ -40,7 +40,8 @@ namespace Vista
         {
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
-            ctrlcliente.ActulizarCliente(nombreun, telefono, correo);
+
+            ctrlcliente.ActulizarCliente(id, telefono, correo);
             MessageBox.Show("Se ha actualizado correctamente");
             this.DialogResult = DialogResult.OK;
             this.Close(); ;
