@@ -9,7 +9,7 @@ namespace Modelo
     public class Cliente
     {
 
-    //Se está tomando el valor de identificación del cliente que se proporciona al crear un nuevo cliente.
+        //Se está tomando el valor de identificación del cliente que se proporciona al crear un nuevo cliente.
 
         private string _idCliente;
         public string IdCliente
@@ -18,7 +18,7 @@ namespace Modelo
             set { _idCliente = value; }
         }
 
-   //Se está tomando el nombre del cliente que se proporcionó al crear un nuevo cliente
+        //Se está tomando el nombre del cliente que se proporcionó al crear un nuevo cliente
 
         private string _Nombre;
         public string Nombre
@@ -27,7 +27,7 @@ namespace Modelo
             set { _Nombre = value; }
         }
 
-   //Esta línea se encarga de asignar el valor del apellido que se proporcionó al crear un nuevo cliente
+        //Esta línea se encarga de asignar el valor del apellido que se proporcionó al crear un nuevo cliente
 
         private string _Apellido;
         public string Apellido
@@ -35,7 +35,7 @@ namespace Modelo
             get { return _Apellido; }
             set { _Apellido = value; }
 
-   //Esta línea se encarga de asignar el valor del cedula que se proporcionó al crear un nuevo cliente
+            //Esta línea se encarga de asignar el valor del cedula que se proporcionó al crear un nuevo cliente
 
         }
         private string _Cedula;
@@ -45,7 +45,7 @@ namespace Modelo
             set { _Cedula = value; }
         }
 
- //Esta línea se encarga de asignar el valor del telefono que se proporcionó al crear un nuevo cliente
+        //Esta línea se encarga de asignar el valor del telefono que se proporcionó al crear un nuevo cliente
 
         private int _Telefono;
         public int Telefono
@@ -53,7 +53,7 @@ namespace Modelo
             get { return _Telefono; }
             set { _Telefono = value; }
         }
-//Esta línea se encarga de asignar el valor del Email que se proporcionó al crear un nuevo cliente
+        //Esta línea se encarga de asignar el valor del Email que se proporcionó al crear un nuevo cliente
 
         private string _Email;
         public string Email
@@ -62,3 +62,4 @@ namespace Modelo
             set { _Email = value; }
         }
     }
+}
