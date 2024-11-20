@@ -13,11 +13,10 @@
   - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦  
   - [Clonar Repositorio](#clonar-repositorio) 📝
 -  [Instalación de Base de Datos](#instacion-de-base-de-datos) 📝
-  - [Usar archivo bak](#usar-archivo-bak) 📝
+  - [Usar archivo bak](#usar-archivo-bak) 📝  
 - ▶️[Ejecucion del Proyecto](#ejecucion-del-proyecto)
   - [Usar la Techa F5](#usar-la-tecla-F5) 
   - [Usar el icono play](#usar-el-icono-play)  
-
 ## 🛠 Instalacion
 En esta sección se explica el proceso de instalación de todas las dependencias necesarias para ejecutar el proyecto.
 
