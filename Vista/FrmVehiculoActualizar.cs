@@ -14,7 +14,7 @@ namespace Vista
     //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public partial class FrmVehiculoActualizar : Form
     {
-        CtrlVehiculo ctVh = new CtrlVehiculo();
+        ControlVehiculo ctVh = new ControlVehiculo();
         private string idInicial;
 
         public FrmVehiculoActualizar()

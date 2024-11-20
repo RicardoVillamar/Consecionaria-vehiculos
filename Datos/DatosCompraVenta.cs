@@ -17,6 +17,7 @@ namespace Datos
     {
         private SqlCommand cmd = null;
 
+        // Inserta los detalles de una compra o venta
         public void AgregarDetalles(List<Detalle> detalles, int IdCompraVenta, SqlConnection cn)
         {
             string script = "INSERT INTO [detalle] (cantidad, precio_unitario, compra_venta_id) VALUES (@cantidad, @precio_unitario, @compra_venta_id); SELECT CAST(scope_identity() AS int);";
@@ -41,7 +42,7 @@ namespace Datos
 
         }
 
-
+        // Inserta una compra o venta
         public int AgregarCompraVenta(CompraVenta entity, int clienteId, SqlConnection cn)
         {
             string fields = "(tipo, id_cliente, total, fecha)";

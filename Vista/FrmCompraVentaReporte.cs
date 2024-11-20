@@ -13,7 +13,7 @@ namespace Vista
 {
     public partial class FrmCompraVentaReporte : Form
     {
-        CtrlCompraVenta controlador = new CtrlCompraVenta();
+        ControlCompraVenta controlador = new ControlCompraVenta();
         public FrmCompraVentaReporte()
         {
             InitializeComponent();

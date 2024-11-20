@@ -13,7 +13,7 @@ namespace Vista
 {
     public partial class FrmClienteActualizar : Form
     {
-        CtrlCliente ctrlcliente = new CtrlCliente();
+        ControlCliente ctrlcliente = new ControlCliente();
         private string id;
         public FrmClienteActualizar()
         {

@@ -14,7 +14,7 @@ namespace Vista
 {
     public partial class FrmClienteReporte : Form
     {
-        CtrlCliente client = new CtrlCliente();
+        ControlCliente client = new ControlCliente();
         public FrmClienteReporte()
         {
             InitializeComponent();

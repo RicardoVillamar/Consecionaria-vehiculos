@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CtrlCliente.cs" />
-    <Compile Include="CtrlCompraVenta.cs" />
-    <Compile Include="CtrlConn.cs" />
-    <Compile Include="CtrlServicios.cs" />
-    <Compile Include="CtrlVehiculo.cs" />
+    <Compile Include="ControlCliente.cs" />
+    <Compile Include="ControlCompraVenta.cs" />
+    <Compile Include="ControlConexion.cs" />
+    <Compile Include="ControlServicios.cs" />
+    <Compile Include="ControlVehiculo.cs" />
     <Compile Include="ValidarCompraVenta.cs" />
     <Compile Include="ValidarVehiculo.cs" />
   </ItemGroup>

@@ -18,7 +18,8 @@ namespace Modelo
         public string TipoTransmision { get => tipoTransmision; set => tipoTransmision = value; }
         public string TipoAuto { get => tipoAuto; set => tipoAuto = value; }
 
-        public Automovil(string idVehiculo, string marca, string tipoVehiculo, string tipoCombustible, string color, string estado, float kilometraje, float precio, 
+        // Constructor de la clase Automovil
+        public Automovil(string idVehiculo, string marca, string tipoVehiculo, string tipoCombustible, string color, string estado, float kilometraje, float precio,
             string idAutomovil, string numeroPuertas, string tipoTransmision, string tipoAuto) : base(idVehiculo, marca, tipoVehiculo, tipoCombustible, color, estado, kilometraje, precio)
         {
             IdAutomovil = idAutomovil;
@@ -27,6 +28,7 @@ namespace Modelo
             TipoAuto = tipoAuto;
         }
 
+        // Método ToString para representar el objeto como una cadena
         public override string ToString()
         {
             return base.ToString() + "\nNumero de Puertas: " + NumeroPuertas + "\nTipo de Transmision: " + TipoTransmision + "\nTipo de Auto: " + tipoAuto;

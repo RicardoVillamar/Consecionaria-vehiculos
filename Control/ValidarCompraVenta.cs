@@ -9,6 +9,7 @@ namespace Control
 {
     public class ValidarCompraVenta
     {
+        // Valida los datos del detalle de la compra/venta
         public static bool ValidarDatosDetalle(DataGridView grid)
         {
             bool valido = true;
@@ -23,26 +24,27 @@ namespace Control
                     int Cantidad = ValidarCompraVenta.aEnteroPositivo(row.Cells["Cantidad"].Value.ToString());
                     decimal PrecioUnitario = ValidarCompraVenta.aDecimal(row.Cells["PrecioUnitario"].Value.ToString());
 
-                    if(Cantidad == -1)
+                    if (Cantidad == -1)
                         valido = false;
 
                     if (PrecioUnitario < 500)
                         valido = false;
- 
+
                 }
                 catch (Exception ex)
                 {
                     valido = false;
                 }
 
-                if(!valido) break;
-                
+                if (!valido) break;
+
                 if (++i == grid.RowCount - 1) break;
             }
 
             return valido;
         }
 
+        // Valida si la cédula es correcta
         public static bool ValidarCedula(string cedula)
         {
             bool esValido = true;
@@ -62,6 +64,7 @@ namespace Control
             return esValido;
         }
 
+        // Convierte un string a decimal
         public static decimal aDecimal(string valor)
         {
             decimal number;
@@ -76,6 +79,7 @@ namespace Control
             }
         }
 
+        // Convierte un string a entero positivo
         public static int aEnteroPositivo(string valor)
         {
             try

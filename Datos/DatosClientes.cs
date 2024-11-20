@@ -14,6 +14,7 @@ namespace Control
     {
         SqlCommand cmd = null;
 
+        // Método para consultar todos los clientes
         public List<Cliente> ConsultarCliente(SqlConnection cone)
         {
             List<Cliente> listaC = new List<Cliente>();
@@ -45,7 +46,7 @@ namespace Control
             return listaC;
         }
 
-
+        // Método para registrar un nuevo cliente
         public string RegistrarCliente(Cliente c, SqlConnection sql)
         {
             string v = " ";
@@ -66,6 +67,8 @@ namespace Control
             }
             return v;
         }
+
+        // Método para actualizar los datos de un cliente
         public string ActualizarCliente(string id, string telf, string email, SqlConnection sql)
         {
             string c = " ";
@@ -87,6 +90,8 @@ namespace Control
             }
             return c;
         }
+
+        // Método para eliminar un cliente
         public string EliminarCliente(string id, SqlConnection sql)
         {
             string eli;
@@ -104,14 +109,14 @@ namespace Control
                 eli = "0" + e.Message;
             }
             return eli;
-
         }
 
+        // Método para filtrar clientes por nombre
         public List<Cliente> FiltarCliente(SqlConnection cn, string nombre)
         {
             List<Cliente> lstC = new List<Cliente>();
             SqlDataReader dr = null;
-            Cliente c  = null;
+            Cliente c = null;
             string scriptC = "SELECT * FROM Clientes WHERE  Nombrecliente = @Nombrecliente";
             cmd = new SqlCommand(scriptC, cn);
             cmd.Parameters.AddWithValue("@Nombrecliente", nombre);
@@ -140,6 +145,7 @@ namespace Control
             return lstC;
         }
 
+        // Método para filtrar clientes por cédula
         public List<Cliente> FiltarClienteC(SqlConnection cn, string cedula)
         {
             List<Cliente> lstCd = new List<Cliente>();
@@ -174,6 +180,7 @@ namespace Control
         }
 
         ////////////////////////
+        // Método para verificar si un cliente existe por cédula
         public int verificar(string cedula, SqlConnection conexion)
         {
             string script = $"SELECT * FROM Clientes WHERE Cedulacliente = '{cedula}';";
@@ -192,6 +199,7 @@ namespace Control
 
         }
 
+        // Método para obtener un cliente por cédula
         public Cliente ObtenerClientePorCedula(string cedula, SqlConnection conexion)
         {
             string script = $"SELECT * FROM Clientes WHERE Cedulacliente = '{cedula}'";

@@ -60,7 +60,7 @@ namespace Vista
 
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
-            CtrlCliente client = new CtrlCliente();
+            ControlCliente client = new ControlCliente();
             string Nombrecliente = txtNombre.Text;
             string Apellidocliente = txtApellido.Text;
             string Cedulacliente = txtCedula.Text;

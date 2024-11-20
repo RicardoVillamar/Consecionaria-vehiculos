@@ -16,6 +16,7 @@ namespace Modelo
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public decimal PrecioUnitario { get => precioUnitario; set => precioUnitario = value; }
 
+        // Constructor que inicializa todos los campos
         public Detalle(int cantidad, string descripcion, decimal precioUnitario)
         {
             Cantidad = cantidad;
@@ -23,6 +24,7 @@ namespace Modelo
             PrecioUnitario = precioUnitario;
         }
 
+        // Constructor que inicializa cantidad y precioUnitario
         public Detalle(int cantidad, decimal precioUnitario)
         {
             this.cantidad = cantidad;

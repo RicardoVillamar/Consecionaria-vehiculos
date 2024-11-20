@@ -8,23 +8,16 @@ namespace Modelo
 {
     public class Servicio
     {
-        private string idServicio;
-        private string tipoVehiculo;
-        private string cedula;
-        private string servicios;
-        private DateTime fecha;
-        private string descripServicio;
-        private float costo;
+        public string IdServicio { get; set; }
+        public string TipoVehiculo { get; set; }
+        public string Cedula { get; set; }
+        public string Servicios { get; set; }
+        public DateTime Fecha { get; set; }
+        public string DescripServicio { get; set; }
+        public float Costo { get; set; }
 
-        public string IdServicio { get => idServicio; set => idServicio = value; }
-        public string TipoVehiculo { get => tipoVehiculo; set => tipoVehiculo = value; }
-        public string Cedula { get => cedula; set => cedula = value; }
-        public string Servicios { get => servicios; set => servicios = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
-        public string DescripServicio { get => descripServicio; set => descripServicio = value; }
-        public float Costo { get => costo; set => costo = value; }
-
-        public Servicio(string idServicio, string tipoVehiculo, string cedula, string servicios, DateTime fecha,  float costo)
+        // Constructor de la clase Servicio
+        public Servicio(string idServicio, string tipoVehiculo, string cedula, string servicios, DateTime fecha, float costo)
         {
             IdServicio = idServicio;
             TipoVehiculo = tipoVehiculo;
@@ -34,28 +27,10 @@ namespace Modelo
             Costo = costo;
         }
 
-        public void RegistrarServicio()
-        {
-
-        }
-        public void ModificarServicio()
-        {
-
-        }
-        public void EliminarServicio()
-        {
-
-        }
-
-        public void GenerarReporte()
-        {
-
-        }
-
+        // Método ToString para representar el objeto como una cadena
         public override string ToString()
         {
-            return "ID:" + idServicio + "\nTipo de Vehiculo: " + tipoVehiculo + "\nCedula: " + cedula + "\nServicios: " + servicios
-                + "\nFecha: " + fecha + "\nDescripcion de Servicio: " + descripServicio + "\nCosto: " + costo;
+            return $"ID: {IdServicio}\nTipo de Vehiculo: {TipoVehiculo}\nCedula: {Cedula}\nServicios: {Servicios}\nFecha: {Fecha}\nDescripcion de Servicio: {DescripServicio}\nCosto: {Costo}";
         }
     }
 }

@@ -12,15 +12,18 @@ using iTextSharp.text;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Control
 {
-    public class CtrlCompraVenta
+    public class ControlCompraVenta
     {
         Conexion conexion = new Conexion();
         DatosCompraVenta CompraVentaDto = new DatosCompraVenta();
         DatosCliente clienteDto = new DatosCliente();
 
+
+        // Registra una nueva compra o venta en el sistema.
+
         public string Registrar(DataGridView tabla, string cedula, string tipo, string fecha)
         {
-            CtrlCliente clienteControlador = new CtrlCliente();
+            ControlCliente clienteControlador = new ControlCliente();
             List<int> IdDetalles = new List<int>();
 
             if (tipo.Equals("")) return "0 Se Debe escojer un tipo para filtrar!";
@@ -32,7 +35,7 @@ namespace Control
 
             if (!ValidarCompraVenta.ValidarDatosDetalle(tabla))
                 return "Datos de detalle invalidos!";
-            
+
             int IdCliente = clienteControlador.obtenerIdCliente(cedula);
 
             CompraVenta compraVenta = new CompraVenta();
@@ -40,7 +43,7 @@ namespace Control
             compraVenta.TipoCV = tipo;
             compraVenta.Total = this.CalcularTotal(tabla);
             compraVenta.Fecha = DateTime.Parse(this.DarFormatoFecha(fecha));
-            
+
             int IdCompraVenta = CompraVentaDto.AgregarCompraVenta(compraVenta, IdCliente, conexion.Cn);
 
             // Agregar cada detalle en la base de datos
@@ -48,18 +51,21 @@ namespace Control
 
             conexion.Cerrar();
             return "CompraVenta registrada!";
-        } 
+        }
+
+
+        // Genera un reporte de compras o ventas filtrado por tipo y cédula.
 
         public string Reporte(DataGridView grid, string tipo, string cedula)
         {
-            CtrlCliente ctrlCliente = new CtrlCliente();
+            ControlCliente ctrlCliente = new ControlCliente();
             List<CompraVenta> lista;
 
             if (tipo.Equals("")) return "0. Se Debe escojer un tipo para filtrar!";
             if (cedula.Length != 10) return "0. El campo cedula debe tener 10 digitos";
 
             conexion.Conectar();
-            if (clienteDto.verificar(cedula, conexion.Cn) == 0) 
+            if (clienteDto.verificar(cedula, conexion.Cn) == 0)
                 return "0 El cliente no está registrado en la base de datos";
             conexion.Cerrar();
 
@@ -67,20 +73,23 @@ namespace Control
             conexion.Conectar();
             lista = CompraVentaDto.ConsultarCompraVenta(tipo, cedula, conexion.Cn);
             conexion.Cerrar();
-            
+
             if (lista.Count == 0) return $"0. El cliente con cedula {cedula} no tiene {tipo}";
 
 
             grid.Rows.Clear();
             lista.ForEach(x =>
             {
-                object[] row = { x.Cliente.Apellido, x.Cliente.Cedula, x.TipoCV, x.Total, x.Fecha }; 
+                object[] row = { x.Cliente.Apellido, x.Cliente.Cedula, x.TipoCV, x.Total, x.Fecha };
                 grid.Rows.Add(row);
             });
 
             conexion.Cerrar();
             return "Filtrado por tipo y cedula, reporte exitoso!";
         }
+
+
+        // Elimina las compras o ventas de un cliente por su cédula.
 
         public int Eliminar(string cedula)
         {
@@ -94,6 +103,9 @@ namespace Control
         }
 
         // Utils **
+
+        // Consulta los detalles de una compra o venta desde un DataGridView.
+
         private List<Detalle> ConsultarDetalles(DataGridView grid)
         {
             List<Detalle> detalles = new List<Detalle>();
@@ -112,7 +124,10 @@ namespace Control
             }
             return detalles;
         }
-        
+
+
+        // Da formato a una fecha en formato dd/MM/yyyy a yyyy-MM-dd.
+
         private string DarFormatoFecha(string fecha)
         {
             string FechaFormateada = "";
@@ -121,8 +136,11 @@ namespace Control
                 FechaFormateada += item + "-";
             }
             return FechaFormateada.Substring(0, FechaFormateada.Length - 1);
-        } 
-        
+        }
+
+
+        // Calcula el total de una compra o venta incluyendo impuestos.
+
         public decimal CalcularTotal(DataGridView dgvDetalle)
         {
             decimal subtotal = 0m, total = 0;
@@ -135,20 +153,23 @@ namespace Control
                 if (++i == dgvDetalle.RowCount - 1) break;// Ignora el ultimo registro en blanco de la tabla
             }
             return subtotal + Decimal.Truncate(subtotal * 0.15m);
-        } 
+        }
 
 
         // Metodos para gestionar el pdf **
+
+        // Genera un archivo PDF con los datos de un DataGridView.
+
         public string GenerarPDF(DataGridView grid)
         {
-            if(grid.Rows.Count == 0)
+            if (grid.Rows.Count == 0)
                 return "Sin registros para generar Pdf";
 
             // Fonts
             iTextSharp.text.Font Titulo = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 20, iTextSharp.text.Font.BOLD, BaseColor.RED);
             iTextSharp.text.Font subTitulo = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD, BaseColor.WHITE);
             iTextSharp.text.Font texto = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
-            
+
             // Columnas de la tabla
             string[] columnas = { "Apellido", "Cedula", "Tipo", "Total", "Fecha" };
 
@@ -168,14 +189,14 @@ namespace Control
                 Document doc = new Document(PageSize.A4, 5, 5, 7, 7);
                 fs = new FileStream("Reporte.pdf", FileMode.Create);
                 PdfWriter pdfW = PdfWriter.GetInstance(doc, fs);
-                
+
                 doc.Open();
                 doc.Add(tituloPdf);
                 doc.Add(Chunk.NEWLINE);
 
 
                 PdfPCell[] colTitulos = new PdfPCell[columnas.Length];
-    
+
                 int i = 0;
                 foreach (string columna in columnas)
                 {
@@ -192,14 +213,14 @@ namespace Control
                     int j = 0;
                     foreach (DataGridViewCell cell in row.Cells)
                     {
-                        
+
                         string value = cell.Value.ToString();
                         colTitulos[j] = new PdfPCell(new Phrase(value, texto));
                         tabla.AddCell(colTitulos[j]);
                         j++;
                     }
                 }
-             
+
                 doc.Add(tabla);
                 doc.Close();
                 pdfW.Close();
@@ -217,6 +238,9 @@ namespace Control
                 conexion.Cerrar();
             }
         }
+
+
+        // Abre el archivo PDF generado.
 
         public void AbrirPDF()
         {

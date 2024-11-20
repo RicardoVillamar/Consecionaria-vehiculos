@@ -8,10 +8,11 @@ using System.Windows.Forms;
 
 namespace Control
 {
-    public class CtrlConn
+    public class ControlConexion
     {
         Conexion conDBB = new Conexion();
 
+        // Método para conectar a la base de datos
         public void conectar()
         {
             string msj = conDBB.Conectar();

@@ -13,7 +13,7 @@ namespace Datos
     {
         SqlCommand cmd = null;
 
-
+        // Método para ingresar un vehículo en la base de datos
         public string IngresarVehiculo(Vehiculo vh, SqlConnection cn)
         {
             string x;
@@ -36,7 +36,7 @@ namespace Datos
                 cmd.Parameters.AddWithValue("@Retirado", "NO");
 
                 int idVehiculo = Convert.ToInt32(cmd.ExecuteScalar());
-                
+
                 if (vh is Automovil)
                 {
                     Automovil auto = (Automovil)vh;
@@ -92,7 +92,8 @@ namespace Datos
 
             return x;
         }
-    
+
+        // Método para consultar vehículos no retirados de la base de datos
         public List<Vehiculo> ConsultarVh(SqlConnection cn)
         {
             List<Vehiculo> listvh = new List<Vehiculo>();
@@ -108,7 +109,7 @@ namespace Datos
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    vh = new Vehiculo("", "", "", "", "", "",0,0) ;
+                    vh = new Vehiculo("", "", "", "", "", "", 0, 0);
                     vh.IdVehiculo = dr["IdVehiculo"].ToString();
                     vh.Marca = dr["Marca"].ToString();
                     vh.TipoVehiculo = dr["TipoVehiculo"].ToString();
@@ -126,6 +127,8 @@ namespace Datos
             }
             return listvh;
         }
+
+        // Método para eliminar un vehículo de la base de datos
         public string EliminarVehiculo(string id, SqlConnection cn)
         {
             string x;
@@ -147,6 +150,7 @@ namespace Datos
             return x;
         }
 
+        // Método para marcar un vehículo como retirado en la base de datos
         public string RetirarVehiculo(string id, SqlConnection cn)
         {
             string x;
@@ -168,6 +172,7 @@ namespace Datos
             return x;
         }
 
+        // Método para actualizar el color y tipo de combustible de un vehículo en la base de datos
         public string ActualizarVehiculo(string id, string color, string tipoCombustible, SqlConnection cn)
         {
             string x;
@@ -191,6 +196,7 @@ namespace Datos
             return x;
         }
 
+        // Método para filtrar vehículos por marca
         public List<Vehiculo> FiltarVhMarca(SqlConnection cn, string marca)
         {
             List<Vehiculo> listvh = new List<Vehiculo>();
@@ -226,6 +232,7 @@ namespace Datos
             return listvh;
         }
 
+        // Método para filtrar vehículos por estado
         public List<Vehiculo> FiltrarVhEstado(SqlConnection cn, string estado)
         {
             List<Vehiculo> listvh = new List<Vehiculo>();

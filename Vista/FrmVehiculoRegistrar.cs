@@ -14,7 +14,7 @@ namespace Vista
     //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public partial class FrmVehiculoRegistrar : Form
     {
-        CtrlVehiculo ctrlVehiculo = new CtrlVehiculo();
+        ControlVehiculo ctrlVehiculo = new ControlVehiculo();
         ValidarVehiculo valH = new ValidarVehiculo();
         public FrmVehiculoRegistrar()
         {
@@ -203,7 +203,7 @@ namespace Vista
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-           CtrlConn ctrlc = new CtrlConn();
+           ControlConexion ctrlc = new ControlConexion();
             ctrlc.conectar();
         }
     }

@@ -76,7 +76,7 @@ namespace Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CtrlServicios ser = new CtrlServicios();
+            ControlServicios ser = new ControlServicios();
             string servicios = cmbServicio.SelectedItem?.ToString();  
             string tipoVehiculo = cmbTipoVehiculo.SelectedItem?.ToString();
             string cedula = txtCedula.Text.Trim();

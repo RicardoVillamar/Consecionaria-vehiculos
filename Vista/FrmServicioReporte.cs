@@ -13,7 +13,7 @@ namespace Vista
 {
     public partial class FrmServicioReporte : Form
     {
-        CtrlServicios ctrlser = new CtrlServicios();
+        ControlServicios ctrlser = new ControlServicios();
         public FrmServicioReporte()
         {
             InitializeComponent();

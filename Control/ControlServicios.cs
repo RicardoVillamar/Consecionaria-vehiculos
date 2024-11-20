@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Control
 {
-    public class CtrlServicios
+    public class ControlServicios
     {
         // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
 

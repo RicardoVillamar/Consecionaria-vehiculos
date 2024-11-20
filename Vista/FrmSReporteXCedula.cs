@@ -13,7 +13,7 @@ namespace Vista
 {
     public partial class FrmSReporteXCedula : Form
     {
-        CtrlServicios ctrlser = new CtrlServicios();
+        ControlServicios ctrlser = new ControlServicios();
         string cedula;
         public FrmSReporteXCedula()
         {

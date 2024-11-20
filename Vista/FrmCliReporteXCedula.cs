@@ -13,7 +13,7 @@ namespace Vista
 {
     public partial class FrmCliReporteXCedula : Form
     {
-        CtrlCliente client = new CtrlCliente();
+        ControlCliente client = new ControlCliente();
         string Cedula;
         public FrmCliReporteXCedula()
         {

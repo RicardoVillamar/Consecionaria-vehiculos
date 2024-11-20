@@ -15,6 +15,7 @@ namespace Datos
 
         public SqlConnection Cn { get => cn; set => cn = value; }
 
+        // Método para establecer la conexión a la base de datos
         public string Conectar()
         {
             try
@@ -31,6 +32,7 @@ namespace Datos
             }
         }
 
+        // Método para cerrar la conexión a la base de datos
         public string Cerrar()
         {
             try

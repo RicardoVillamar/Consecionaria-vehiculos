@@ -12,7 +12,7 @@ using iTextSharp.text.pdf;
 
 namespace Control
 {
-    public class CtrlCliente
+    public class ControlCliente
     {
         Conexion coxclient = new Conexion();
         DatosCliente datclient = new DatosCliente();

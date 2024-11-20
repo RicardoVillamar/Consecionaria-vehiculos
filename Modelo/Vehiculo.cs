@@ -8,23 +8,14 @@ namespace Modelo
 {
     public class Vehiculo
     {
-        private string idVehiculo;
-        private string marca;
-        private string tipoVehiculo;
-        private string tipoCombustible;
-        private string color;
-        private string estado;
-        private float kilometraje;
-        private float precio;
-
-        public string IdVehiculo { get => idVehiculo; set => idVehiculo = value; }
-        public string Marca { get => marca; set => marca = value; }
-        public string TipoVehiculo { get => tipoVehiculo; set => tipoVehiculo = value; }
-        public string Estado { get => estado; set => estado = value; }
-        public string TipoCombustible { get => tipoCombustible; set => tipoCombustible = value; }
-        public string Color { get => color; set => color = value; }
-        public float Kilometraje { get => kilometraje; set => kilometraje = value; }
-        public float Precio { get => precio; set => precio = value; }
+        public string IdVehiculo { get; set; }
+        public string Marca { get; set; }
+        public string TipoVehiculo { get; set; }
+        public string TipoCombustible { get; set; }
+        public string Color { get; set; }
+        public string Estado { get; set; }
+        public float Kilometraje { get; set; }
+        public float Precio { get; set; }
 
         public Vehiculo(string idVehiculo, string marca, string tipoVehiculo, string tipoCombustible, string color, string estado, float kilometraje, float precio)
         {
@@ -38,24 +29,26 @@ namespace Modelo
             Precio = precio;
         }
 
-        public void RegistarVehiculo()
+        public void RegistrarVehiculo()
         {
-
+            // Implementar lógica de registro de vehículo
         }
 
         public void ReporteVehiculo()
         {
-
+            // Implementar lógica de reporte de vehículo
         }
 
-        public Boolean RetirarVehiculo()
+        public bool RetirarVehiculo()
         {
+            // Implementar lógica de retiro de vehículo
             return true;
         }
 
+        // Método para obtener la representación en cadena del objeto Vehiculo
         public override string ToString()
         {
-            return "Id: " + IdVehiculo + "\nMarca: " + Marca + "\nTipo de Vehiculo: " + TipoVehiculo + "\nTipo de Combustible: " + TipoCombustible + "\nColor: " + Color + "\nEstado: " + Estado + "\nKilometraje: " + Kilometraje + "\nPrecio: " + Precio;
+            return $"Id: {IdVehiculo}\nMarca: {Marca}\nTipo de Vehiculo: {TipoVehiculo}\nTipo de Combustible: {TipoCombustible}\nColor: {Color}\nEstado: {Estado}\nKilometraje: {Kilometraje}\nPrecio: {Precio}";
         }
     }
 }

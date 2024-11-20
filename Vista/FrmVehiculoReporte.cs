@@ -14,7 +14,7 @@ namespace Vista
     //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public partial class FrmVehiculoReporte : Form
     {
-        CtrlVehiculo Ctrlvh = new CtrlVehiculo();
+        ControlVehiculo Ctrlvh = new ControlVehiculo();
 
         public FrmVehiculoReporte()
         {

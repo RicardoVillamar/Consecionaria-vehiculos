@@ -15,7 +15,7 @@ namespace Vista
     {
         // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
 
-        CtrlServicios ctrlser = new CtrlServicios();
+        ControlServicios ctrlser = new ControlServicios();
         string servicios;
         public FrmSReporteXServicio()
         {

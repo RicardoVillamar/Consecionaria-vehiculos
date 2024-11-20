@@ -8,6 +8,7 @@ namespace Control
 {
     public class ValidarVehiculo
     {
+        // Valida y convierte el kilometraje de string a float
         public float ValidarKilometraje(string kilometraje)
         {
             float km = -1;
@@ -22,6 +23,7 @@ namespace Control
             return km;
         }
 
+        // Valida y convierte el precio de string a float
         public float ValidarPrecio(string precio)
         {
             float pr = -1;
@@ -36,6 +38,7 @@ namespace Control
             return pr;
         }
 
+        // Valida y convierte el número de ruedas de string a int
         public int ValidarRuedas(string ruedas)
         {
             int ru = -1;
@@ -50,6 +53,7 @@ namespace Control
             return ru;
         }
 
+        // Valida y convierte la capacidad de carga de string a float
         public float ValidarCapacidadCarga(string capacidadCarga)
         {
             float cc = -1;
@@ -62,9 +66,10 @@ namespace Control
                 Console.WriteLine("Error en la capacidad de carga");
             }
             return cc;
-            
+
         }
 
+        // Genera un ID aleatorio para el vehículo
         public string GenerarId()
         {
             string id = "";
