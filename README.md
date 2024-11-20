@@ -1,9 +1,7 @@
-# Sistemas de Consecionaria de Vehiculos
-
-<center>
-  ## Grupo A de Construcion de Software Sof-Ve-6-2
-</center>
-# Grupo A
+<div style="text-align: center;">
+  <h1>Sistemas de Consecionaria de Vehiculos</h1>
+  <h2>Grupo A de Construccion de Software Sof-Ve-6-2</h2>
+</div>
 
 # Tabla de Contenidos
 - [Instalacion](#instalacion)
