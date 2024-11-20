@@ -1,6 +1,8 @@
 <div align="center">
 
-# Sistemas de Concesionaria de Vehículos ![image](https://github.com/user-attachments/assets/f23d3406-39c5-438a-8a20-46cafc80052a)
+![image](https://github.com/user-attachments/assets/f23d3406-39c5-438a-8a20-46cafc80052a)
+
+# Sistemas de Concesionaria de Vehículos 
 
 # Grupo A de Construcción de Software Sof-Ve-6-2
 
