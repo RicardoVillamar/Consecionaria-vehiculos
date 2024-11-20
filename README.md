@@ -2,6 +2,29 @@
 
 **Instrucciones detalladas sobre como abrir el Proyecto**
 
+# Tabla de Contenidos
+- [Instalacion](#instalacion)
+  - [Requerimientos de Instalacion](#requerimientos-de-instalacion)
+  - [Clonar Repositorio](#clonar-repositorio)
+- [Instalacion de base de datos](#instalacion-de-base-de-datos)
+- [Ejecucion del Proyecto](#ejecucion-del-proyecto)
+- [Licencia](#licencia)
+
+## Instalacion
+Aquí va el contenido de esta sección.
+
+### Requerimientos de Instalacion
+Aquí describe los requisitos necesarios.
+
+### 📝Clonar Repositorio
+Explica cómo clonar el repositorio.
+
+## Instalacion de base de datos
+Escribe los pasos para instalar la base de datos.
+
+## Ejecucion del Proyecto
+Detalla cómo ejecutar el proyect
+
 **Clonar el Repositorio desde GitHub**
 1. Abre Visual Studio.
 2. En la pantalla principal, seleccionamos Clonar un repositorio.
