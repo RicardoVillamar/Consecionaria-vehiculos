@@ -29,7 +29,7 @@ En la pantalla principal, selecciona *Clonar un repositorio*.
 En el campo **Repositorio**, pega la URL del repositorio de GitHub:    
    [https://github.com/RicardoVillamar/Consecionaria-vehiculos.git](https://github.com/RicardoVillamar/Consecionaria-vehiculos.git).
 
-Tambien puedes decargar el zip del ultimo Commit del Repositorio
+Tambien puedes descargar el zip del ultimo Commit del Repositorio
 
 ![image](https://github.com/user-attachments/assets/6014994f-9a31-4d89-a7cb-c7ddd71c4e6b)
 
@@ -51,6 +51,5 @@ También se abrirá la ventana del formulario principal.
 Hacer clic en el botón verde con un icono de "Play" que dice "Iniciar".
 Este botón ejecutará el proyecto en modo de depuración, al igual que F5.  
 <div align="center">
-![image](https://github.com/user-attachments/assets/6e5d1bff-7d05-4b75-b48d-183dd129a5f3)
-
+![4028901](https://github.com/user-attachments/assets/ca762625-664f-4209-9567-37b28be92d0d)
 </div>
