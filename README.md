@@ -42,7 +42,9 @@ Asegúrate de que tu proyecto esté abierto en Visual Studio.
 Simplemente presiona la tecla F5 en tu teclado. Esto inicia el proyecto en modo de depuración, lo que significa que Visual Studio compilará el proyecto y lo ejecutará.  
 También se abrirá la ventana del formulario principal.  
 <div align="center">
-![image](https://github.com/user-attachments/assets/fbbd00ee-9f47-40d2-ac21-504cc4f1d0f8)  
+ 
+![image](https://github.com/user-attachments/assets/b089082d-695d-4bf7-ad12-87bd2b5d3c8c)
+
 </div>
 
 ### Usar el icono Play
