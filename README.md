@@ -1,6 +1,9 @@
-<div style="text-align: center;">
-  <h1>Sistemas de Consecionaria de Vehiculos</h1>
-  <h2>Grupo A de Construccion de Software Sof-Ve-6-2</h2>
+<div align="center">
+
+# Sistemas de Concesionaria de Vehículos
+
+## Grupo A de Construcción de Software Sof-Ve-6-2
+
 </div>
 
 # Tabla de Contenidos
