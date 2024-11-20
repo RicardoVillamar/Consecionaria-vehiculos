@@ -9,3 +9,18 @@
 3. En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
 4. En el campo Ruta local, selecciona la carpeta donde deseas guardar el proyecto en tu máquina.
 5. Haz clic en Clonar. Esto descargará el proyecto desde GitHub y lo abrirá automáticamente en Visual Studio.
+
+**Clonar el Repositorio desde GitHub**
+Ejecutar el Proyecto
+1. Presionamos F5 o hacemos click en el botón "Iniciar" en la barra de herramientas.
+2. El proyecto debería abrirse automáticamente.
+
+📝 Clonar Repositorio
+Instalacion
+En esta sección se explica el proceso de instalación de todas las dependencias necesarias para ejecutar el proyecto.
+
+📦 Requerimientos de Instalacion
+Visual Studio 2022 - Descarga
+Sql Server - Descarga
+Git - Descarga
+.Net 8 SDK - Descarga
