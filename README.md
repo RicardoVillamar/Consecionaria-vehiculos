@@ -47,13 +47,14 @@ Ir a la opción de restaurar
 Hacer clic derecho sobre Bases de datos.   
 Selecciona la opción Restaurar base de datos.  
 Seleccionar la fuente de la restauración. 
-![image](https://github.com/user-attachments/assets/b41afe00-60ad-4b2d-9750-31f828fbfe4c)  
+![image](https://github.com/user-attachments/assets/3915dcfa-015a-43ff-b77d-cb287cb95089)
+
 
 En la ventana de restauración, bajo Origen, selecciona la opción Dispositivo.  
 Haz clic en el botón de los tres puntos (...) al lado de Dispositivo.  
 En la nueva ventana, selecciona Agregar.  
 Busca el archivo .bak en tu sistema, selecciónalo y haz clic en Aceptar.  
-![image](https://github.com/user-attachments/assets/c3d59ace-0070-460a-920c-c82815947f11)
+![image](https://github.com/user-attachments/assets/d44c0bf0-4926-4d20-8b16-31f4a8ea32c7)
 
 > ⚠️ Recuerde cambiar el nombre del servidor por tu nombre
 
