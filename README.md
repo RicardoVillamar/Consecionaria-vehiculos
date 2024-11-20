@@ -1,3 +1,6 @@
+# Sistemas de Consecionaria de Vehiculos
+
+Grupo de Construcion de Software Sof-Ve-6-2
 # Grupo A
 
 # Tabla de Contenidos
@@ -8,16 +11,16 @@
 - [Ejecucion del Proyecto](#ejecucion-del-proyecto)
 
 ## Instalacion
-Aquí va el contenido de esta sección.
+En esta sección se explica el proceso de instalación de todas las dependencias necesarias para ejecutar el proyecto.
 
-### Requerimientos de Instalacion
-Aquí describe los requisitos necesarios.
+## Requerimientos de Instalacion 📦
+- [Visual Studio 2022 - Descarga]( https://visualstudio.microsoft.com/es/)
+- [.NET 8 SDK - Descarga](https://dotnet.microsoft.com/es-es/download)
 
 ### 📝Clonar Repositorio
-###
-1. Abre Visual Studio.
-2. En la pantalla principal, seleccionamos Clonar un repositorio.
-3. En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
+Abre Visual Studio.
+En la pantalla principal, seleccionamos Clonar un repositorio.
+En el campo Repositorio, pega la URL del repositorio de GitHub (https://github.com/RicardoVillamar/Consecionaria-vehiculos.git ).
 
 Tambien puedes decargar el zip del ultimo Commit del Repositorio
 
