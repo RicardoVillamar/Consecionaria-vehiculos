@@ -1,6 +1,8 @@
 # Sistemas de Consecionaria de Vehiculos
 
-Grupo de Construcion de Software Sof-Ve-6-2
+<center>
+  ## Grupo A de Construcion de Software Sof-Ve-6-2
+</center>
 # Grupo A
 
 # Tabla de Contenidos
