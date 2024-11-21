@@ -40,8 +40,9 @@ En esta parte se explicara el proceso de instalación de la base de datos.
 > ⚠️ **Warning**  
 > ⚠️ Recuerde tener instalado el [SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 >   
-Tener el scrip o el archivo bak de la Base de Datos
+
 ### Usar Archivo bak
+>Recuerde tener el scrip o el archivo bak de la Base de Datos  >
 Abrir SQL Server  
 Inicia sesión en el servidor SQL donde deseas restaurar la base de datos.  
 Ir a la opción de restaurar  
