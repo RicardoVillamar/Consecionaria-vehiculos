@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
+
     public partial class FrmVehiculoReporte : Form
     {
         ControlVehiculo Ctrlvh = new ControlVehiculo();
@@ -23,6 +23,7 @@ namespace Vista
             Ctrlvh.LlenarReporte(dgvReporteVehiculo);
         }
 
+        // Método para retirar un vehículo
         private void btnRetirar_Click(object sender, EventArgs e)
         {
             if (dgvReporteVehiculo.SelectedRows.Count > 0)
@@ -40,15 +41,17 @@ namespace Vista
                 {
                     MessageBox.Show("El Vehiculo No Se Retirado");
                 }
-                
+
             }
             else
             {
                 MessageBox.Show("Seleccione una fila");
             }
             Ctrlvh.LlenarReporte(dgvReporteVehiculo);
-        
+
         }
+
+        // Método para actualizar un vehículo
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (dgvReporteVehiculo.SelectedRows.Count > 0)
@@ -61,7 +64,7 @@ namespace Vista
                 frmAV.SetDatos(id, color, tipo);
                 if (frmAV.ShowDialog() == DialogResult.OK)
                 {
-                   ActualizarFila(id);
+                    ActualizarFila(id);
                 }
             }
             else
@@ -70,6 +73,7 @@ namespace Vista
             }
         }
 
+        // Método para actualizar una fila en el DataGridView
         private void ActualizarFila(string id)
         {
             foreach (DataGridViewRow fila in dgvReporteVehiculo.Rows)
@@ -82,6 +86,7 @@ namespace Vista
             }
         }
 
+        // Método para generar y abrir un PDF
         private void btnGenerarPDF_Click(object sender, EventArgs e)
         {
             Ctrlvh.GenerarPDF();

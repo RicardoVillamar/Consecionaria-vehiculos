@@ -21,6 +21,7 @@ namespace Vista
             client.LlenarGrid(dgvClienteReporte);
         }
 
+        // Evento para actualizar un cliente
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (dgvClienteReporte.SelectedRows.Count > 0)
@@ -45,6 +46,7 @@ namespace Vista
             }
         }
 
+        // Método para actualizar una fila en el DataGridView
         private void ActualizarFila(string nombre)
         {
             foreach (DataGridViewRow fila in dgvClienteReporte.Rows)
@@ -57,13 +59,13 @@ namespace Vista
             }
         }
 
-
+        // Evento para dar de baja a un cliente
         private void btnDarBaja_Click(object sender, EventArgs e)
         {
             if (dgvClienteReporte.SelectedRows.Count > 0)
             {
-                
-                int dex  = dgvClienteReporte.SelectedRows[0].Index;
+
+                int dex = dgvClienteReporte.SelectedRows[0].Index;
                 string ID = dgvClienteReporte.Rows[dex].Cells["colIdCliente"].Value.ToString();
                 string mensaje = client.BajarCliente(ID);
 
@@ -81,14 +83,16 @@ namespace Vista
             {
                 MessageBox.Show("seleccione fila a dar de baja");
             }
-            
+
         }
 
+        // Evento para refrescar el DataGridView
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             client.LlenarGrid(dgvClienteReporte);
         }
 
+        // Evento para generar y abrir un PDF
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             client.GenerarPDF();

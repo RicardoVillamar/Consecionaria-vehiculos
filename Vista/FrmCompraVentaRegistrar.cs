@@ -19,18 +19,20 @@ namespace Vista
             InitializeComponent();
         }
 
+        // Método para registrar una compra o venta
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string msj = ctrlCV.Registrar(
                 TablaDetalle,
-                "1234567891", 
+                "1234567891",
                 cmbTipo.Text,
                 dtmFecha.Text
             );
             MessageBox.Show(msj);
             this.LimpiarFormulario();
         }
-         
+
+        // Método para limpiar el formulario
         private void LimpiarFormulario()
         {
             txtCedula.Text = "";
@@ -38,6 +40,7 @@ namespace Vista
             TablaDetalle.Rows.Clear();
         }
 
+        // Método para manejar el evento KeyPress del campo txtCedula
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             char n = e.KeyChar;
@@ -45,8 +48,6 @@ namespace Vista
             if (!char.IsDigit(n) && n != ' ' && n != (char)Keys.Back)
                 e.Handled = true;
         }
-
-
     }
 
 }

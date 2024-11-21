@@ -12,7 +12,6 @@ namespace Datos
 {
     public class DatosServicios
     {
-        // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
 
         SqlCommand cmd = null;
         //Registrar

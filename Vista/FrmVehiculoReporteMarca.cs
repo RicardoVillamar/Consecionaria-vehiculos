@@ -11,18 +11,21 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
-    public partial class FrmVReporteXMarca : Form
+
+    public partial class FrmVehiculoReporteMarca : Form
     {
         ControlVehiculo Ctrlvh = new ControlVehiculo();
         string marcaBuscada;
-        public FrmVReporteXMarca()
+
+        // Constructor del formulario
+        public FrmVehiculoReporteMarca()
         {
             InitializeComponent();
             dgvReporteVehiculo.Columns["colIdVehiculo"].Visible = false;
             Ctrlvh.LlenarReporte(dgvReporteVehiculo);
         }
 
+        // Evento KeyDown para el TextBox de marca
         private void txtMarca_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -33,6 +36,7 @@ namespace Vista
             }
         }
 
+        // Evento Click para el botón de generar PDF
         private void btnGenerarPDF_Click(object sender, EventArgs e)
         {
             Ctrlvh.GenerarPDFMarca(marcaBuscada);

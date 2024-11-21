@@ -8,7 +8,6 @@ using Modelo;
 
 namespace Datos
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public class DatosVehiculo
     {
         SqlCommand cmd = null;

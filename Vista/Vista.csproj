@@ -58,17 +58,17 @@
     <Compile Include="FrmClienteActualizar.Designer.cs">
       <DependentUpon>FrmClienteActualizar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCliReporteXCedula.cs">
+    <Compile Include="FrmClienteReporteXCedula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCliReporteXCedula.Designer.cs">
-      <DependentUpon>FrmCliReporteXCedula.cs</DependentUpon>
+    <Compile Include="FrmClienteReporteXCedula.Designer.cs">
+      <DependentUpon>FrmClienteReporteXCedula.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCliReporteXNombre.cs">
+    <Compile Include="FrmClienteReporteXNombre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCliReporteXNombre.Designer.cs">
-      <DependentUpon>FrmCliReporteXNombre.cs</DependentUpon>
+    <Compile Include="FrmClienteReporteXNombre.Designer.cs">
+      <DependentUpon>FrmClienteReporteXNombre.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCompraVentaReporte.cs">
       <SubType>Form</SubType>
@@ -94,17 +94,17 @@
     <Compile Include="FrmServicioActualizar.Designer.cs">
       <DependentUpon>FrmServicioActualizar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSReporteXServicio.cs">
+    <Compile Include="FrmServicioReporteServicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSReporteXServicio.Designer.cs">
-      <DependentUpon>FrmSReporteXServicio.cs</DependentUpon>
+    <Compile Include="FrmServicioReporteServicio.Designer.cs">
+      <DependentUpon>FrmServicioReporteServicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSReporteXCedula.cs">
+    <Compile Include="FrmServicioReporteCedula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSReporteXCedula.Designer.cs">
-      <DependentUpon>FrmSReporteXCedula.cs</DependentUpon>
+    <Compile Include="FrmServicioReporteCedula.Designer.cs">
+      <DependentUpon>FrmServicioReporteCedula.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmServicioReporte.cs">
       <SubType>Form</SubType>
@@ -118,17 +118,17 @@
     <Compile Include="FrmVehiculoActualizar.Designer.cs">
       <DependentUpon>FrmVehiculoActualizar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVReporteXEstado.cs">
+    <Compile Include="FrmVehiculoReporteEstado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVReporteXEstado.Designer.cs">
-      <DependentUpon>FrmVReporteXEstado.cs</DependentUpon>
+    <Compile Include="FrmVehiculoReporteEstado.Designer.cs">
+      <DependentUpon>FrmVehiculoReporteEstado.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVReporteXMarca.cs">
+    <Compile Include="FrmVehiculoReporteMarca.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVReporteXMarca.Designer.cs">
-      <DependentUpon>FrmVReporteXMarca.cs</DependentUpon>
+    <Compile Include="FrmVehiculoReporteMarca.Designer.cs">
+      <DependentUpon>FrmVehiculoReporteMarca.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVehiculoRegistrar.cs">
       <SubType>Form</SubType>
@@ -165,11 +165,11 @@
     <EmbeddedResource Include="FrmClienteActualizar.resx">
       <DependentUpon>FrmClienteActualizar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCliReporteXCedula.resx">
-      <DependentUpon>FrmCliReporteXCedula.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClienteReporteXCedula.resx">
+      <DependentUpon>FrmClienteReporteXCedula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCliReporteXNombre.resx">
-      <DependentUpon>FrmCliReporteXNombre.cs</DependentUpon>
+    <EmbeddedResource Include="FrmClienteReporteXNombre.resx">
+      <DependentUpon>FrmClienteReporteXNombre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCompraVentaReporte.resx">
       <DependentUpon>FrmCompraVentaReporte.cs</DependentUpon>
@@ -183,11 +183,11 @@
     <EmbeddedResource Include="FrmServicioActualizar.resx">
       <DependentUpon>FrmServicioActualizar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSReporteXServicio.resx">
-      <DependentUpon>FrmSReporteXServicio.cs</DependentUpon>
+    <EmbeddedResource Include="FrmServicioReporteServicio.resx">
+      <DependentUpon>FrmServicioReporteServicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSReporteXCedula.resx">
-      <DependentUpon>FrmSReporteXCedula.cs</DependentUpon>
+    <EmbeddedResource Include="FrmServicioReporteCedula.resx">
+      <DependentUpon>FrmServicioReporteCedula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServicioReporte.resx">
       <DependentUpon>FrmServicioReporte.cs</DependentUpon>
@@ -195,11 +195,11 @@
     <EmbeddedResource Include="FrmVehiculoActualizar.resx">
       <DependentUpon>FrmVehiculoActualizar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVReporteXEstado.resx">
-      <DependentUpon>FrmVReporteXEstado.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVehiculoReporteEstado.resx">
+      <DependentUpon>FrmVehiculoReporteEstado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVReporteXMarca.resx">
-      <DependentUpon>FrmVReporteXMarca.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVehiculoReporteMarca.resx">
+      <DependentUpon>FrmVehiculoReporteMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculoRegistrar.resx">
       <DependentUpon>FrmVehiculoRegistrar.cs</DependentUpon>

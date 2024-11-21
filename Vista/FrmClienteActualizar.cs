@@ -15,11 +15,13 @@ namespace Vista
     {
         ControlCliente ctrlcliente = new ControlCliente();
         private string id;
+
         public FrmClienteActualizar()
         {
             InitializeComponent();
         }
 
+        // Establece los datos del cliente en los campos de texto
         public void SetDatos(string idn, string telefono, string correo)
         {
             id = idn;
@@ -27,6 +29,7 @@ namespace Vista
             txtCorreo.Text = correo.ToString();
         }
 
+        // Obtiene los datos actualizados del cliente
         public (string, string, string) GetDatosActualizados()
         {
             return (
@@ -36,6 +39,7 @@ namespace Vista
             );
         }
 
+        // Maneja el evento de clic del botón Aceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string telefono = txtTelefono.Text;
@@ -47,6 +51,7 @@ namespace Vista
             this.Close(); ;
         }
 
+        // Limita la longitud del texto en el campo de teléfono
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
             if (txtTelefono.Text.Length > 10)

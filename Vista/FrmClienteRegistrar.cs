@@ -18,6 +18,7 @@ namespace Vista
             InitializeComponent();
         }
 
+        // Evento para validar la entrada de texto en el campo Nombre
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             char letra = e.KeyChar;
@@ -28,6 +29,7 @@ namespace Vista
             }
         }
 
+        // Evento para validar la entrada de texto en el campo Cedula
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             char Num = e.KeyChar;
@@ -38,6 +40,7 @@ namespace Vista
             }
         }
 
+        // Evento para validar la entrada de texto en el campo Apellido
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             char letra = e.KeyChar;
@@ -48,6 +51,7 @@ namespace Vista
             }
         }
 
+        // Evento para validar la entrada de texto en el campo Telefono
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             char Num = e.KeyChar;
@@ -58,6 +62,7 @@ namespace Vista
             }
         }
 
+        // Evento para registrar un nuevo cliente
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
             ControlCliente client = new ControlCliente();
@@ -76,6 +81,7 @@ namespace Vista
             }
         }
 
+        // Evento para limitar la longitud del texto en el campo Cedula
         private void txtCedula_TextChanged(object sender, EventArgs e)
         {
             if (txtCedula.Text.Length > 10)
@@ -85,6 +91,7 @@ namespace Vista
             }
         }
 
+        // Evento para limitar la longitud del texto en el campo Telefono
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
             if (txtTelefono.Text.Length > 10)
@@ -94,6 +101,7 @@ namespace Vista
             }
         }
 
+        // Evento que se ejecuta al cargar el formulario
         private void FrmClienteRegistrar_Load(object sender, EventArgs e)
         {
 

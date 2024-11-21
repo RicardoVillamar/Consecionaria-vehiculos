@@ -15,7 +15,6 @@ namespace Control
 {
     public class ControlServicios
     {
-        // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
 
         Conexion conServ = new Conexion();
         DatosServicios servConex = new DatosServicios();

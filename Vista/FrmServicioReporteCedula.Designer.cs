@@ -1,6 +1,6 @@
 ﻿namespace Vista
 {
-    partial class FrmSReporteXCedula
+    partial class FrmServicioReporteCedula
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSReporteXCedula));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmServicioReporteCedula));
             this.btnPdf = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvServicios = new System.Windows.Forms.DataGridView();

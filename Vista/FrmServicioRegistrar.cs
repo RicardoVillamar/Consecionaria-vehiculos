@@ -14,7 +14,6 @@ namespace Vista
 {
     public partial class FrmServicioRegistrar : Form
     {
-        // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
         public FrmServicioRegistrar()
         {
             InitializeComponent();
@@ -24,6 +23,7 @@ namespace Vista
             txtCosto.Enabled = false;
         }
 
+        // Evento que se ejecuta cuando se cambia la selección en el comboBox de servicios
         private void cmbServicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbServicio.SelectedIndex != -1)
@@ -74,10 +74,11 @@ namespace Vista
             }
         }
 
+        // Evento que se ejecuta al hacer clic en el botón para registrar el servicio
         private void button1_Click(object sender, EventArgs e)
         {
             ControlServicios ser = new ControlServicios();
-            string servicios = cmbServicio.SelectedItem?.ToString();  
+            string servicios = cmbServicio.SelectedItem?.ToString();
             string tipoVehiculo = cmbTipoVehiculo.SelectedItem?.ToString();
             string cedula = txtCedula.Text.Trim();
             DateTime fecha = dtpFecha.Value;
@@ -97,7 +98,7 @@ namespace Vista
             {
                 MessageBox.Show("Por favor, seleccione un servicio.");
                 return;
-            }     
+            }
             if (!float.TryParse(txtCosto.Text, out costo))
             {
                 MessageBox.Show("El costo debe ser un número válido.");

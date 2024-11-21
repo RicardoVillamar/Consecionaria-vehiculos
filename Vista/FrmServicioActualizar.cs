@@ -18,9 +18,9 @@ namespace Vista
         public FrmServicioActualizar()
         {
             InitializeComponent();
-
         }
 
+        // Evento que se ejecuta cuando se cambia la selección en el comboBox de servicios
         private void cmbServicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbServicio.SelectedIndex != -1)
@@ -44,6 +44,7 @@ namespace Vista
             }
         }
 
+        // Método para establecer los datos en el formulario
         public void SetDatos(string idServ, string tipodeVehiculo, string servicio, DateTime fecha, float costo)
         {
             idServi = idServ;
@@ -53,6 +54,7 @@ namespace Vista
             txtCosto.Text = costo.ToString();
         }
 
+        // Método para obtener los datos actualizados del formulario
         public (string, string, string, DateTime, float) GetDatosActualizados()
         {
             return (
@@ -64,6 +66,7 @@ namespace Vista
             );
         }
 
+        // Evento que se ejecuta al hacer clic en el botón Aceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string servicios = cmbServicio.SelectedItem.ToString();

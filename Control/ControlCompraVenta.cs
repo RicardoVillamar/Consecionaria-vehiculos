@@ -98,8 +98,8 @@ namespace Control
             DatosCompraVenta CompraVentaDto = new DatosCompraVenta();
 
             CompraVentaDto.Eliminar(cedula, conexion.Cn);
-            return 1;
             conexion.Cerrar();
+            return 1;
         }
 
         // Utils **

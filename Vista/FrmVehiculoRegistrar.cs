@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
+
     public partial class FrmVehiculoRegistrar : Form
     {
         ControlVehiculo ctrlVehiculo = new ControlVehiculo();
@@ -27,7 +27,7 @@ namespace Vista
         //Tipo de Vehiculo
         private void cmbTipoVehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string tipoVehiculo =(string) cmbTipoVehiculo.Text;
+            string tipoVehiculo = (string)cmbTipoVehiculo.Text;
 
             if (tipoVehiculo.Equals("Automovil"))
             {
@@ -35,11 +35,12 @@ namespace Vista
                 gbCamion.Enabled = false;
                 gbMotocicleta.Enabled = false;
 
-            }else if (tipoVehiculo.Equals("Camion"))
+            }
+            else if (tipoVehiculo.Equals("Camion"))
             {
                 gbCamion.Enabled = true;
                 gbAutomovil.Enabled = false;
-                gbMotocicleta.Enabled = false;   
+                gbMotocicleta.Enabled = false;
             }
             else if (tipoVehiculo.Equals("Motocicleta"))
             {
@@ -47,7 +48,7 @@ namespace Vista
                 gbAutomovil.Enabled = false;
                 gbCamion.Enabled = false;
             }
-       
+
         }
 
         //Registrar Vehiculo
@@ -61,7 +62,7 @@ namespace Vista
             string tipoCombustible = txtCombustible.Text;
             string kilometraje = txtKilometraje.Text;
             string precio = txtPrecio.Text;
- 
+
             string msj;
 
             if (tipoVehiculo.Equals("Automovil"))
@@ -114,6 +115,7 @@ namespace Vista
         //Vehiculo
         private void txtMarca_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto de la marca
             char letra = e.KeyChar;
             if (!char.IsLetter(letra) && letra != ' ' && letra != (char)Keys.Back)
             {
@@ -129,6 +131,7 @@ namespace Vista
 
         private void txtColor_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del color
             char color = e.KeyChar;
             if (!char.IsLetter(color) && color != ' ' && color != (char)Keys.Back)
             {
@@ -139,6 +142,7 @@ namespace Vista
 
         private void txtCombustible_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del combustible
             char comustible = e.KeyChar;
             if (!char.IsLetter(comustible) && comustible != ' ' && comustible != (char)Keys.Back)
             {
@@ -149,6 +153,7 @@ namespace Vista
 
         private void txtKilometraje_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del kilometraje
             char km = e.KeyChar;
             if (!char.IsDigit(km) && km != ' ' && km != (char)Keys.Back)
             {
@@ -159,6 +164,7 @@ namespace Vista
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del precio
             char precio = e.KeyChar;
             if (!char.IsDigit(precio) && precio != ' ' && precio != (char)Keys.Back)
             {
@@ -170,6 +176,7 @@ namespace Vista
         //Automovil
         private void txtNPuertas_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del número de puertas
             char puertas = e.KeyChar;
             if (!char.IsDigit(puertas) && puertas != ' ' && puertas != (char)Keys.Back)
             {
@@ -181,6 +188,7 @@ namespace Vista
         //Camion
         private void txtCapacidadCarga_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto de la capacidad de carga
             char capacidad = e.KeyChar;
             if (!char.IsDigit(capacidad) && capacidad != ' ' && capacidad != (char)Keys.Back)
             {
@@ -193,6 +201,7 @@ namespace Vista
         //Motocicleta
         private void txtNRuedas_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Maneja el evento de tecla presionada para el campo de texto del número de ruedas
             char ruedas = e.KeyChar;
             if (!char.IsDigit(ruedas) && ruedas != ' ' && ruedas != (char)Keys.Back)
             {
@@ -203,7 +212,8 @@ namespace Vista
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-           ControlConexion ctrlc = new ControlConexion();
+            // Conecta a la base de datos
+            ControlConexion ctrlc = new ControlConexion();
             ctrlc.conectar();
         }
     }

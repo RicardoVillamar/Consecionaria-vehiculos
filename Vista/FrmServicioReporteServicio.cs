@@ -11,22 +11,26 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class FrmSReporteXServicio : Form
+    public partial class FrmServicioReporteServicio : Form
     {
-        // Modulo de Servicio elaborado por: Quiñonez Castrellon Anthony Joel
-
         ControlServicios ctrlser = new ControlServicios();
         string servicios;
-        public FrmSReporteXServicio()
+
+        // Constructor del formulario
+        public FrmServicioReporteServicio()
         {
             InitializeComponent();
             ctrlser.LlenarGrid(dgvServicios);
         }
+
+        // Evento al cambiar la selección del combo box
         private void cmbServicio_SelectedIndexChanged(object sender, EventArgs e)
         {
             servicios = cmbServicio.SelectedItem.ToString();
             ctrlser.LlenarFilServ(dgvServicios, servicios);
         }
+
+        // Evento al hacer clic en el botón para generar PDF
         private void btnPdf_Click(object sender, EventArgs e)
         {
             ctrlser.GenerarPDFServ(servicios);

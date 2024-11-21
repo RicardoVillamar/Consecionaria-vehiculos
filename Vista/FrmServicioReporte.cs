@@ -19,6 +19,8 @@ namespace Vista
             InitializeComponent();
             ctrlser.LlenarGrid(dgvServicios);
         }
+
+        // Método para actualizar el DataGridView
         public void ActualizarDataGridView()
         {
             ctrlser.LlenarGrid(dgvServicios);
@@ -49,6 +51,7 @@ namespace Vista
             }
         }
 
+        // Método para actualizar una fila específica en el DataGridView
         private void ActualizarFila(string idserv)
         {
             foreach (DataGridViewRow fila in dgvServicios.Rows)
@@ -86,11 +89,12 @@ namespace Vista
             }
             ctrlser.LlenarGrid(dgvServicios);
         }
+
         private void btnPdf_Click(object sender, EventArgs e)
         {
             ctrlser.GenerarPDF();
             ctrlser.AbrirPDF();
-        }   
+        }
     }
 
 }

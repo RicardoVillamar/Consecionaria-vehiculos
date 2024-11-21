@@ -19,6 +19,7 @@ namespace Vista
             InitializeComponent();
         }
 
+        // Evento para generar el reporte en PDF
         private void Reporte_Click(object sender, EventArgs e)
         {
             if (TablaReporteCompraVenta.Rows.Count == 0)
@@ -31,6 +32,7 @@ namespace Vista
             controlador.AbrirPDF();
         }
 
+        // Evento para filtrar el reporte
         private void btnFiltrarReporte_Click(object sender, EventArgs e)
         {
             string mensaje = controlador.Reporte(
@@ -45,6 +47,7 @@ namespace Vista
             MessageBox.Show(mensaje);
         }
 
+        // Evento para manejar el clic en el contenido de la tabla
         private void TablaReporte_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -56,18 +59,21 @@ namespace Vista
                 if (msj == DialogResult.OK)
                 {
                     controlador.Eliminar(cedula);
-                    TablaReporteCompraVenta.Rows.Clear();    
+                    TablaReporteCompraVenta.Rows.Clear();
                 }
             }
 
         }
 
+        // Método para limpiar los campos del formulario
         private void LimpiarCampos()
         {
             cmbTipo.ResetText();
             campoCedula.Text = "";
             TablaReporteCompraVenta.Rows.Clear();
         }
+
+        // Evento para manejar la entrada de teclas en el campo de cédula
         private void campoCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             char c = e.KeyChar;

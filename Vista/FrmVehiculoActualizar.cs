@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
+
     public partial class FrmVehiculoActualizar : Form
     {
         ControlVehiculo ctVh = new ControlVehiculo();
@@ -22,6 +22,7 @@ namespace Vista
             InitializeComponent();
         }
 
+        // Establece los datos iniciales del vehículo
         public void SetDatos(string idc, string color, string tipo)
         {
             idInicial = idc;
@@ -29,6 +30,7 @@ namespace Vista
             txtTipoC.Text = tipo.ToString();
         }
 
+        // Obtiene los datos actualizados del vehículo
         public (string, string, string) GetDatosActualizados()
         {
             return (
@@ -38,7 +40,7 @@ namespace Vista
             );
         }
 
-
+        // Maneja el evento de clic del botón Aceptar
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string color = txtColor.Text;

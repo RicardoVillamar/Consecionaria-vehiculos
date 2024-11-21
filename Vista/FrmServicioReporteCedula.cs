@@ -11,15 +11,19 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class FrmSReporteXCedula : Form
+    public partial class FrmServicioReporteCedula : Form
     {
         ControlServicios ctrlser = new ControlServicios();
         string cedula;
-        public FrmSReporteXCedula()
+
+        // Constructor del formulario
+        public FrmServicioReporteCedula()
         {
             InitializeComponent();
             ctrlser.LlenarGrid(dgvServicios);
         }
+
+        // Evento para manejar la entrada de teclas en el campo de texto de cédula
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -32,6 +36,8 @@ namespace Vista
                 e.Handled = true;
             }
         }
+
+        // Evento para manejar la acción al presionar una tecla en el campo de texto de cédula
         private void txtCedula_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -42,6 +48,7 @@ namespace Vista
             }
         }
 
+        // Evento para manejar la acción al hacer clic en el botón de generar PDF
         private void btnPdf_Click(object sender, EventArgs e)
         {
             ctrlser.GenerarPDFCed(cedula);

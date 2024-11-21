@@ -1,6 +1,6 @@
 ﻿namespace Vista
 {
-    partial class FrmSReporteXServicio
+    partial class FrmServicioReporteServicio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSReporteXServicio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmServicioReporteServicio));
             this.cmbServicio = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnPdf = new System.Windows.Forms.Button();

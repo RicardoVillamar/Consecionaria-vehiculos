@@ -16,7 +16,6 @@ using System.Text.RegularExpressions;
 
 namespace Control
 {
-    //Elaborado por el estudiante: Villamar Minuche Ricardo Daniel
     public class ControlVehiculo
     {
         private static List <Vehiculo> listVehiculo = new List<Vehiculo>();
