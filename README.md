@@ -38,7 +38,7 @@ Tambien puedes descargar el zip del ultimo Commit del Repositorio
 ### Instalación de Base de Datos
 En esta parte se explicara el proceso de instalación de la base de datos.
 > ⚠️ **Warning**  
-> ⚠️ Recuerde tener instalado el [SQL Server]([https://dotnet.microsoft.com/es-es/download](https://www.microsoft.com/es-es/sql-server/sql-server-downloads ))
+> ⚠️ Recuerde tener instalado el [SQL Server](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 Tener el scrip o el archivo bak de la Base de Datos
 ### Usar Archivo bak
 Abrir SQL Server  
