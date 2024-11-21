@@ -4,7 +4,7 @@
 
 ## Sistemas de Concesionaria de Vehículos 
 
- Grupo A de Construcción de Software Sof-Ve-6-2
+ Grupo A de Construcción de Software SOF-VE-6-2
 
 </div>
 
@@ -44,19 +44,20 @@ En esta parte se explicara el proceso de instalación de la base de datos.
 ### Usar Archivo bak
 >Recuerde tener el scrip o el archivo bak de la Base de Datos
 >  
-Abrir SQL Server  
-Inicia sesión en el servidor SQL donde deseas restaurar la base de datos.  
-Ir a la opción de restaurar  
-Hacer clic derecho sobre Bases de datos.   
-Selecciona la opción Restaurar base de datos.  
-Seleccionar la fuente de la restauración. 
+- Abrir SQL Server  
+- Inicia sesión en el servidor SQL donde deseas restaurar la base de datos.  
+- Ir a la opción de restaurar  
+- Hacer clic derecho sobre Bases de datos.   
+- Selecciona la opción Restaurar base de datos.  
+- Seleccionar la fuente de la restauración.
+
 ![image](https://github.com/user-attachments/assets/3915dcfa-015a-43ff-b77d-cb287cb95089)
 
-
-En la ventana de restauración, bajo Origen, selecciona la opción Dispositivo.  
-Haz clic en el botón de los tres puntos (...) al lado de Dispositivo.  
-En la nueva ventana, selecciona Agregar.  
-Busca el archivo .bak en tu sistema, selecciónalo y haz clic en Aceptar.  
+- En la ventana de restauración, bajo Origen, selecciona la opción Dispositivo.  
+- Haz clic en el botón de los tres puntos (...) al lado de Dispositivo.  
+- En la nueva ventana, selecciona Agregar.  
+- Busca el archivo .bak en tu sistema, selecciónalo y haz clic en Aceptar.
+   
 ![image](https://github.com/user-attachments/assets/d44c0bf0-4926-4d20-8b16-31f4a8ea32c7)
 
 > ⚠️ Recuerde debe cambiar el app.config del proyecto por la direccion de su equipo que para poder usar la base de datos
