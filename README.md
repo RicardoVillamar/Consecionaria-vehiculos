@@ -12,7 +12,7 @@
 - 🛠[Instalacion](#instalacion)
   - [Requerimientos de Instalacion](#requerimientos-de-instalacion) 📦  
   - [Clonar Repositorio](#clonar-repositorio) 📝
--  [Instalación de Base de Datos](#instacion-de-base-de-datos) 📝  
+-  [Instalación de Base de Datos](#instacion-de-base-de-datos)
 - ▶️[Ejecucion del Proyecto](#ejecucion-del-proyecto)
   - [Usar la Techa F5](#usar-la-tecla-F5) 
   - [Usar el icono play](#usar-el-icono-play)  
