@@ -56,7 +56,7 @@ En la nueva ventana, selecciona Agregar.
 Busca el archivo .bak en tu sistema, selecciónalo y haz clic en Aceptar.  
 ![image](https://github.com/user-attachments/assets/d44c0bf0-4926-4d20-8b16-31f4a8ea32c7)
 
-> ⚠️ Recuerde cambiar el nombre del servidor por tu nombre en el proyecto
+> ⚠️ Recuerde debe cambiar el app.config del proyecto por la direccion de su equipo que para poder usar la base de datos
 
 
 ### ▶️ Ejecucion del Proyecto
