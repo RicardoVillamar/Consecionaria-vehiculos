@@ -22,8 +22,8 @@ En esta sección se explica el proceso de instalación de todas las dependencias
 ## Requerimientos de Instalacion 📦
 - [Visual Studio 2022 - Descarga]( https://visualstudio.microsoft.com/es/)
 - [.NET 8 SDK - Descarga](https://dotnet.microsoft.com/es-es/download)
-- [Git - Descarga]( [https://visualstudio.microsoft.com/es/](https://git-scm.com/))
-- [SQL Server - Descarga]([https://dotnet.microsoft.com/es-es/download](https://www.microsoft.com/es-es/sql-server/sql-server-downloads ))
+- [Git - Descarga](https://git-scm.com/))
+- [SQL Server - Descarga](https://www.microsoft.com/es-es/sql-server/sql-server-downloads)
 
 ### 📝Clonar Repositorio
 Abre Visual Studio.  
